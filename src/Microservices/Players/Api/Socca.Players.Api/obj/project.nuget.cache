@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "tzOCkLjQaID1ZNMsqXI865qDXoXsyf9142szRu5dxzP7+xSGDm7+uOd176GZu7swtJ5tI8iD7TEQ8t4I9XUlQQ==",
+  "success": true,
+  "projectFilePath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Api/Socca.Players.Api/Socca.Players.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/munyaradzimandava/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/munyaradzimandava/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/munyaradzimandava/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/munyaradzimandava/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/munyaradzimandava/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/munyaradzimandava/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
