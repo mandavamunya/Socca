@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <Folder Include="Service\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Socca.Players.Data\Socca.Players.Data.csproj" />

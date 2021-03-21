@@ -2,5 +2,6 @@
 {
     public interface IFootballClubService
     {
+        LinkToStadium()
     }
 }

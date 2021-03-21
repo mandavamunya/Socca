@@ -7,4 +7,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Socca.FootballClub.Data\Socca.FootballClub.Data.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
 </Project>

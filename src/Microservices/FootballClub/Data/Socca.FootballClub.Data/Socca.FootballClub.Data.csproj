@@ -7,4 +7,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Socca.FootballClub.Domain\Socca.FootballClub.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
 </Project>

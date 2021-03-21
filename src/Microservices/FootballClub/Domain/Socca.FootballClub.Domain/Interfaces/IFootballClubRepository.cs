@@ -1,9 +1,6 @@
 ﻿namespace Socca.FootballClub.Domain.Interfaces
 {
-    public class FootballClubRepository
+    public interface IFootballClubRepository
     {
-        public FootballClubRepository()
-        {
-        }
     }
 }
