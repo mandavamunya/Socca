@@ -3,11 +3,20 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Socca" expanded="True" selected="True">
+          <Node name="Socca" expanded="True">
             <Node name="src" expanded="True">
               <Node name="Microservices" expanded="True">
                 <Node name="FootballClub" expanded="True" />
-                <Node name="Players" expanded="True" />
+                <Node name="Players" expanded="True">
+                  <Node name="Domain" expanded="True">
+                    <Node name="Socca.Players.Domain" expanded="True">
+                      <Node name="Entities" expanded="True">
+                        <Node name="Player.cs" selected="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="Stadium" expanded="True" />
               </Node>
             </Node>
           </Node>
