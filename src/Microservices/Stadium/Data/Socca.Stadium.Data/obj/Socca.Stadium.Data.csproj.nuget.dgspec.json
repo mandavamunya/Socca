@@ -14,7 +14,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -88,7 +88,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Domain/Socca.Stadium.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
