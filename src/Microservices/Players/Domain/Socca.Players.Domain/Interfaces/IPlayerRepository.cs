@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Socca.Players.Domain.Entities;
 
 namespace Socca.Players.Domain.Interfaces
 {
     public interface IPlayerRepository
     {
-        IEnumerable<Player> GetPlayer();
-        void Add(Player player);
+        Task<IEnumerable<Player>> GetPlayer();
+        Task Add(Player player);
     }
 }

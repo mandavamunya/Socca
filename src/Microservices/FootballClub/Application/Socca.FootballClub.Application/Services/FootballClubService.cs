@@ -1,4 +1,5 @@
-﻿using Socca.FootballClub.Application.Interfaces;
+﻿using System.Threading.Tasks;
+using Socca.FootballClub.Application.Interfaces;
 using Socca.FootballClub.Application.Models;
 
 namespace Socca.FootballClub.Application.Services
@@ -9,7 +10,7 @@ namespace Socca.FootballClub.Application.Services
         {
         }
 
-        public void AssignToStadium(AssignToStadium assignToStadium)
+        public Task AssignToStadium(AssignToStadium assignToStadium)
         {
             throw new System.NotImplementedException();
         }

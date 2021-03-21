@@ -92,11 +92,24 @@
       "Socca.FootballClub.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Socca.FootballClub.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Socca.FootballClub.Data.dll": {}
         },
         "runtime": {
           "bin/placeholder/Socca.FootballClub.Data.dll": {}
+        }
+      },
+      "Socca.FootballClub.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Socca.FootballClub.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Socca.FootballClub.Domain.dll": {}
         }
       }
     }
@@ -218,6 +231,11 @@
       "type": "project",
       "path": "../../Data/Socca.FootballClub.Data/Socca.FootballClub.Data.csproj",
       "msbuildProject": "../../Data/Socca.FootballClub.Data/Socca.FootballClub.Data.csproj"
+    },
+    "Socca.FootballClub.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/Socca.FootballClub.Domain/Socca.FootballClub.Domain.csproj",
+      "msbuildProject": "../../Domain/Socca.FootballClub.Domain/Socca.FootballClub.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {

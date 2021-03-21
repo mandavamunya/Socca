@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Socca.Stadium.Domain.Interfaces
 {
     public interface IStadiumRepository
     {
-        IEnumerable<Entities.Stadium> GetStadium();
-        void Add(Entities.Stadium stadium);
+        Task<IEnumerable<Entities.Stadium>> GetStadium();
+        Task Add(Entities.Stadium stadium);
     }
 }

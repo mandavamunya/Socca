@@ -1,4 +1,5 @@
-﻿using Socca.FootballClub.Domain.Interfaces;
+﻿using System.Threading.Tasks;
+using Socca.FootballClub.Domain.Interfaces;
 
 namespace Socca.FootballClub.Data.Repository
 {
@@ -6,6 +7,11 @@ namespace Socca.FootballClub.Data.Repository
     {
         public FootballClubRepository()
         {
+        }
+
+        public Task Add(Domain.Entities.FootballClub footballClub)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
