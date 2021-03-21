@@ -75,6 +75,42 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Socca.Stadium.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Socca.Stadium.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Socca.Stadium.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Socca.Stadium.Application.dll": {}
+        }
+      },
+      "Socca.Stadium.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Socca.Stadium.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Socca.Stadium.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Socca.Stadium.Data.dll": {}
+        }
+      },
+      "Socca.Stadium.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Socca.Stadium.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Socca.Stadium.Domain.dll": {}
+        }
       }
     }
   },
@@ -185,10 +221,26 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Socca.Stadium.Application/1.0.0": {
+      "type": "project",
+      "path": "../../Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj",
+      "msbuildProject": "../../Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj"
+    },
+    "Socca.Stadium.Data/1.0.0": {
+      "type": "project",
+      "path": "../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj",
+      "msbuildProject": "../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj"
+    },
+    "Socca.Stadium.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj",
+      "msbuildProject": "../../Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Socca.Stadium.Application >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -216,7 +268,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj": {
+              "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Socca.Stadium.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Socca.Stadium.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Socca.Stadium.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Socca.Stadium.Data.dll": {}
+        }
+      },
+      "Socca.Stadium.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Socca.Stadium.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Socca.Stadium.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Socca.Stadium.Data/1.0.0": {
+      "type": "project",
+      "path": "../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj",
+      "msbuildProject": "../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj"
+    },
+    "Socca.Stadium.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj",
+      "msbuildProject": "../../Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Socca.Stadium.Data >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/munyaradzimandava/.nuget/packages/": {}
@@ -31,7 +68,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj": {
+              "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

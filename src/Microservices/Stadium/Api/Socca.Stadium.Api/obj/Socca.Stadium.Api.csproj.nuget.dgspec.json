@@ -25,7 +25,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj": {
+                "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -57,6 +61,170 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj",
+        "projectName": "Socca.Stadium.Application",
+        "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/Socca.Stadium.Application.csproj",
+        "packagesPath": "/Users/munyaradzimandava/.nuget/packages/",
+        "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj": {
+                "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj",
+        "projectName": "Socca.Stadium.Data",
+        "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj",
+        "packagesPath": "/Users/munyaradzimandava/.nuget/packages/",
+        "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Data/Socca.Stadium.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj": {
+                "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj",
+        "projectName": "Socca.Stadium.Domain",
+        "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Socca.Stadium.Domain.csproj",
+        "packagesPath": "/Users/munyaradzimandava/.nuget/packages/",
+        "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Domain/Socca.Stadium.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6wc50nb9wO+b+T2O//Jy24TAdqzrUmTMclEIba1ANOsFWoqgFbrrNpnTkjxbf0FYLnjL66WVYer6+4TsxaoyEA==",
+  "dgSpecHash": "Duv1bKhy1Z5HWL0cbfC41njujV/7g1HSbWNy0K++xDdTm4nwnX0zIBg0sqetGr+HiWLoY4dJ86MMhOdIGrZucw==",
   "success": true,
   "projectFilePath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Api/Socca.Stadium.Api/Socca.Stadium.Api.csproj",
   "expectedPackageFiles": [

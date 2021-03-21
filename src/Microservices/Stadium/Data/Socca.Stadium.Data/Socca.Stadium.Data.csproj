@@ -8,4 +8,7 @@
     <Folder Include="Context\" />
     <Folder Include="Repository\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Socca.Stadium.Domain\Socca.Stadium.Domain.csproj" />
+  </ItemGroup>
 </Project>

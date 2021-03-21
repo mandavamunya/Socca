@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Socca.Players.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Socca.Players.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Socca.Players.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Socca.Players.Data.dll": {}
+        }
+      },
+      "Socca.Players.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Socca.Players.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Socca.Players.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Socca.Players.Data/1.0.0": {
+      "type": "project",
+      "path": "../../Data/Socca.Players.Data/Socca.Players.Data.csproj",
+      "msbuildProject": "../../Data/Socca.Players.Data/Socca.Players.Data.csproj"
+    },
+    "Socca.Players.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/Socca.Players.Domain/Socca.Players.Domain.csproj",
+      "msbuildProject": "../../Domain/Socca.Players.Domain/Socca.Players.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Socca.Players.Data >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/munyaradzimandava/.nuget/packages/": {}
@@ -31,7 +68,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Data/Socca.Players.Data/Socca.Players.Data.csproj": {
+              "projectPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Data/Socca.Players.Data/Socca.Players.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
