@@ -6,7 +6,7 @@ namespace Socca.Players.Domain.Interfaces
 {
     public interface IPlayerRepository
     {
-        Task<IEnumerable<Player>> GetPlayer();
+        Task<IEnumerable<Player>> Get();
         Task Add(Player player);
     }
 }

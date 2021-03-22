@@ -11,6 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Socca.FootballClubStadium.Application.Interfaces;
+using Socca.FootballClubStadium.Application.Services;
+using Socca.FootballClubStadium.Data.Context;
+using Socca.FootballClubStadium.Data.Repository;
+using Socca.FootballClubStadium.Domain.Interfaces;
 
 namespace Socca.FootballClubStadium.Api
 {
@@ -32,6 +37,9 @@ namespace Socca.FootballClubStadium.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Socca.FootballClubStadium.Api", Version = "v1" });
             });
+            services.AddTransient<IFootballClubStadiumRepository, FootballClubStadiumRepository>();
+            services.AddTransient<IFootballClubStadiumService, FootballClubStadiumService>();
+            services.AddTransient<FootballClubStadiumDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

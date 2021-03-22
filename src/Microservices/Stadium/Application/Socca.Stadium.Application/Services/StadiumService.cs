@@ -1,23 +1,26 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Socca.Stadium.Application.Interfaces;
+using Socca.Stadium.Domain.Interfaces;
 
 namespace Socca.Stadium.Application.Services
 {
     public class StadiumService: IStadiumService
     {
-        public StadiumService()
+        private readonly IStadiumRepository _repository;
+        public StadiumService(IStadiumRepository repository)
         {
+            _repository = repository;
         }
 
-        public Task AddStadium(Domain.Entities.Stadium stadium)
+        public async Task AddStadium(Domain.Entities.Stadium stadium)
         {
-            throw new System.NotImplementedException();
+            await _repository.Add(stadium);
         }
 
-        public Task<IEnumerable<Domain.Entities.Stadium>> GetStadiums()
+        public async Task<IEnumerable<Domain.Entities.Stadium>> GetStadiums()
         {
-            throw new System.NotImplementedException();
+            return await _repository.GetStadium();
         }
     }
 }

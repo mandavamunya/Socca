@@ -10,5 +10,6 @@
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

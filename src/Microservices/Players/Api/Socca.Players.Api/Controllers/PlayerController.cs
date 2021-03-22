@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Socca.Players.Application.Interfaces;
+using Socca.Players.Application.Models;
+using Socca.Players.Domain.Entities;
 
 namespace Socca.Players.Api.Controllers
 {
@@ -6,9 +11,23 @@ namespace Socca.Players.Api.Controllers
     [ApiController]
     public class PlayerController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Index()
+        private readonly IPlayerService _playerService;
+        public PlayerController(IPlayerService playerService)
         {
+            _playerService = playerService;
+        }
+
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Player>>> Get()
+        {
+            return Ok(await _playerService.GetPlayers());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] PlayerTransfer playerTransfer)
+        {
+            await _playerService.Transfer(playerTransfer);
             return Ok();
         }
     }

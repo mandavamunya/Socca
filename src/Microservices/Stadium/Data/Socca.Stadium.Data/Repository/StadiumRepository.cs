@@ -1,23 +1,28 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Socca.Stadium.Data.Context;
 using Socca.Stadium.Domain.Interfaces;
 
 namespace Socca.Stadium.Data.Repository
 {
     public class StadiumRepository: IStadiumRepository
     {
-        public StadiumRepository()
+        private readonly StadiumDbContext _context;
+        public StadiumRepository(StadiumDbContext context)
         {
+            _context = context;
         }
 
-        public Task Add(Domain.Entities.Stadium stadium)
+        public async Task Add(Domain.Entities.Stadium stadium)
         {
-            throw new System.NotImplementedException();
+            await _context.AddAsync(stadium);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<Domain.Entities.Stadium>> GetStadium()
+        public async Task<IEnumerable<Domain.Entities.Stadium>> GetStadium()
         {
-            throw new System.NotImplementedException();
+            return await _context.Stadiums.ToListAsync();
         }
     }
 }

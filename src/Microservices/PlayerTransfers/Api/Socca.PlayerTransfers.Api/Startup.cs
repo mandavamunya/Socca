@@ -11,6 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Socca.PlayerTransfers.Application.Interfaces;
+using Socca.PlayerTransfers.Application.Services;
+using Socca.PlayerTransfers.Data.Context;
+using Socca.PlayerTransfers.Data.Repository;
+using Socca.PlayerTransfers.Domain.Interfaces;
 
 namespace Socca.PlayerTransfers.Api
 {
@@ -32,6 +37,9 @@ namespace Socca.PlayerTransfers.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Socca.PlayerTransfers.Api", Version = "v1" });
             });
+            services.AddTransient<IPlayerTransferService, PlayerTransferService>();
+            services.AddTransient<IPlayerTransferRepository, PlayerTransferRepository>();
+            services.AddTransient<PlayerTransferDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

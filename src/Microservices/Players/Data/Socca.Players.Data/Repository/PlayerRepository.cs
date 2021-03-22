@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Socca.Players.Data.Context;
 using Socca.Players.Domain.Entities;
 using Socca.Players.Domain.Interfaces;
 
@@ -7,14 +9,20 @@ namespace Socca.Players.Data.Repository
 {
     public class PlayerRepository : IPlayerRepository
     {
-        public Task Add(Player player)
+        private readonly PlayerDbContext _context;
+        public PlayerRepository(PlayerDbContext context)
         {
-            throw new System.NotImplementedException();
+            _context = context;
         }
 
-        public Task<IEnumerable<Player>> GetPlayer()
+        public async Task Add(Player player)
         {
-            throw new System.NotImplementedException();
+            await _context.AddAsync(player);
+        }
+
+        public async Task<IEnumerable<Player>> Get()
+        {
+            return await _context.Players.ToListAsync();
         }
     }
 }

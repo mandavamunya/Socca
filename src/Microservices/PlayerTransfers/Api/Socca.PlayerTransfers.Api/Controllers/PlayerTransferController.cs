@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Socca.PlayerTransfers.Application.Interfaces;
+using Socca.PlayerTransfers.Domain.Entities;
 
 namespace Socca.PlayerTransfers.Api.Controllers
 {
@@ -6,10 +9,17 @@ namespace Socca.PlayerTransfers.Api.Controllers
     [ApiController]
     public class PlayerTransferController: ControllerBase
     {
-        [HttpGet]
-        public IActionResult Index()
+        private readonly IPlayerTransferService _playerTransferService;
+
+        public PlayerTransferController(IPlayerTransferService playerTransferService)
         {
-            return Ok();
+            _playerTransferService = playerTransferService;
+        }
+
+        [HttpGet]
+        public ActionResult<IEnumerable<PlayerTransfer>> Get()
+        {
+            return Ok(_playerTransferService.GetPlayerTransfers());
         }
     }
 }

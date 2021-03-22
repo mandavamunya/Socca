@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Socca.PlayerTransfers.Data.Context;
 using Socca.PlayerTransfers.Domain.Entities;
 using Socca.PlayerTransfers.Domain.Interfaces;
 
@@ -6,13 +9,20 @@ namespace Socca.PlayerTransfers.Data.Repository
 {
     public class PlayerTransferRepository: IPlayerTransferRepository
     {
-        public PlayerTransferRepository()
+        private readonly PlayerTransferDbContext _context;
+        public PlayerTransferRepository(PlayerTransferDbContext context)
         {
+            _context = context;
         }
 
-        public Task Add(PlayerTransfer playerTransfer)
+        public async Task Add(PlayerTransfer playerTransfer)
         {
-            throw new System.NotImplementedException();
+            await _context.AddAsync(playerTransfer);
+        }
+
+        public async Task<IEnumerable<PlayerTransfer>> Get()
+        {
+            return await _context.PlayerTransfers.ToListAsync();
         }
     }
 }

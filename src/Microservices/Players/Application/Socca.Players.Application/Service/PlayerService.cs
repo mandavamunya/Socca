@@ -3,28 +3,31 @@ using System.Threading.Tasks;
 using Socca.Players.Application.Interfaces;
 using Socca.Players.Application.Models;
 using Socca.Players.Domain.Entities;
+using Socca.Players.Domain.Interfaces;
 
 namespace Socca.Players.Application.Service
 {
     public class PlayerService: IPlayerService
     {
-        public PlayerService()
+        private readonly IPlayerRepository _repository;
+        public PlayerService(IPlayerRepository repository)
         {
+            _repository = repository;
         }
 
-        public Task AddPlayer(Player player)
+        public async Task AddPlayer(Player player)
         {
-            throw new System.NotImplementedException();
+            await _repository.Add(player);
         }
 
-        public Task<IEnumerable<Player>> GetPlayers()
+        public async Task<IEnumerable<Player>> GetPlayers()
         {
-            throw new System.NotImplementedException();
+            return await _repository.Get();
         }
 
-        public Task Transfer(PlayerTransfer playerTransfer)
+        public async Task Transfer(PlayerTransfer playerTransfer)
         {
-            throw new System.NotImplementedException();
+            // send command to PlayerTransfer service
         }
     }
 }

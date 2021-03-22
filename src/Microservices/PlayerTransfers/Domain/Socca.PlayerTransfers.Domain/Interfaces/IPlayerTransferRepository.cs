@@ -1,9 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Socca.PlayerTransfers.Domain.Entities;
 
 namespace Socca.PlayerTransfers.Domain.Interfaces
 {
     public interface IPlayerTransferRepository
     {
-        Task Add(Domain.Entities.PlayerTransfer playerTransfer);
+        Task Add(Entities.PlayerTransfer playerTransfer);
+        Task<IEnumerable<PlayerTransfer>> Get();
     }
 }

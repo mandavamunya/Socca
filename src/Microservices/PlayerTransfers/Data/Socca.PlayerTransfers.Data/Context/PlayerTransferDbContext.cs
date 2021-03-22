@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Socca.PlayerTransfers.Domain.Entities;
+
 namespace Socca.PlayerTransfers.Data.Context
 {
-    public class PlayerTransferDbContext
+    public class PlayerTransferDbContext: DbContext
     {
-        public PlayerTransferDbContext()
+        public PlayerTransferDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        public DbSet<PlayerTransfer> PlayerTransfers { get; set; }
     }
 }

@@ -1,17 +1,28 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Socca.FootballClub.Data.Context;
 using Socca.FootballClub.Domain.Interfaces;
 
 namespace Socca.FootballClub.Data.Repository
 {
     public class FootballClubRepository: IFootballClubRepository
     {
-        public FootballClubRepository()
+        private readonly FootballClubDbContext _context;
+        public FootballClubRepository(FootballClubDbContext context)
         {
+            _context = context;
         }
 
-        public Task Add(Domain.Entities.FootballClub footballClub)
+        public async Task Add(Domain.Entities.FootballClub footballClub)
         {
-            throw new System.NotImplementedException();
+            await _context.AddAsync(footballClub);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Domain.Entities.FootballClub>> Get()
+        {
+            return await _context.FootballClubs.ToListAsync();
         }
     }
 }

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+
 namespace Socca.FootballClub.Data.Context
 {
-    public class FootballClubDbContext
+    public class FootballClubDbContext : DbContext
     {
-        public FootballClubDbContext()
+        public FootballClubDbContext(DbContextOptions options) : base(options)
         {
         }
+        public DbSet<Domain.Entities.FootballClub> FootballClubs { get; set; }
     }
 }

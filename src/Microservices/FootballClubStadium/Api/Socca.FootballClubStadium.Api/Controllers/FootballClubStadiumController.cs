@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Socca.FootballClubStadium.Application.Interfaces;
 
 namespace Socca.FootballClubStadium.Api.Controllers
 {
@@ -6,10 +9,25 @@ namespace Socca.FootballClubStadium.Api.Controllers
     [ApiController]
     public class FootballClubStadiumController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Index()
+        private readonly IFootballClubStadiumService _service;
+        public FootballClubStadiumController(IFootballClubStadiumService service)
         {
+            _service = service;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Domain.Entities.FootballClubStadium>>> Get()
+        {
+            return Ok(await _service.Get());
+        }
+
+        /*
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] Domain.Entities.FootballClubStadium footballClubStadium)
+        {
+            await _service.AddFootballClubStadium(footballClubStadium);
             return Ok();
         }
+        */
     }
 }
