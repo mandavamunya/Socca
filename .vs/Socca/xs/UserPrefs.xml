@@ -6,8 +6,27 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Socca" expanded="True" selected="True">
+            <Node name="src" expanded="True">
+              <Node name="Microservices" expanded="True" />
+            </Node>
             <Node name="tests" expanded="True">
-              <Node name="Microservices.Tests" expanded="True" />
+              <Node name="Microservices.Tests" expanded="True">
+                <Node name="FootballClub.Tests" expanded="True">
+                  <Node name="Socca.FootballClub.UnitTests" expanded="True" />
+                </Node>
+                <Node name="FootballClubStadium.Tests" expanded="True">
+                  <Node name="Socca.FootballClubStadium.UnitTests" expanded="True" />
+                </Node>
+                <Node name="Players.Tests" expanded="True">
+                  <Node name="Socca.Player.UnitTests" expanded="True" />
+                </Node>
+                <Node name="PlayerTransfers.Tests" expanded="True">
+                  <Node name="Socca.PlayerTransfers.UnitTests" expanded="True" />
+                </Node>
+                <Node name="Stadium.Tests" expanded="True">
+                  <Node name="Socca.Stadium.UnitTests" expanded="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
