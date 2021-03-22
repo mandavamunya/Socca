@@ -3,10 +3,12 @@
   <MonoDevelop.Ide.ItemProperties.src.Microservices.PlayerTransfers.Api.Socca.PlayerTransfers.Api PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="src/Microservices/Stadium/Api/Socca.Stadium.Api/Controllers/StadiumController.cs">
     <Files>
-      <File FileName="src/Microservices/PlayerTransfers/Api/Socca.PlayerTransfers.Api/Startup.cs" Line="50" Column="67" />
-      <File FileName="src/Microservices/PlayerTransfers/Api/Socca.PlayerTransfers.Api/Controllers/PlayerTransferController.cs" Line="23" Column="56" />
-      <File FileName="src/Microservices/PlayerTransfers/Application/Socca.PlayerTransfers.Application/Services/PlayerTransferService.cs" Line="22" Column="56" />
-      <File FileName="src/Microservices/Stadium/Api/Socca.Stadium.Api/Controllers/StadiumController.cs" Line="19" Column="22" />
+      <File FileName="src/Microservices/FootballClub/Api/Socca.FootballClub.Api/Startup.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/FootballClub/Api/Socca.FootballClub.Api/Controllers/FootballClubController.cs" Line="24" Column="1" />
+      <File FileName="src/Microservices/FootballClubStadium/Api/Socca.FootballClubStadium.Api/Controllers/FootballClubStadiumController.cs" Line="23" Column="1" />
+      <File FileName="src/Microservices/Players/Api/Socca.Players.Api/Controllers/PlayerController.cs" Line="33" Column="10" />
+      <File FileName="src/Microservices/PlayerTransfers/Api/Socca.PlayerTransfers.Api/Controllers/PlayerTransferController.cs" Line="27" Column="1" />
+      <File FileName="src/Microservices/Stadium/Api/Socca.Stadium.Api/Controllers/StadiumController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,17 +17,14 @@
             <Node name="Solution Items" expanded="True" />
             <Node name="src" expanded="True">
               <Node name="Microservices" expanded="True">
-                <Node name="PlayerTransfers" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.PlayerTransfers.Api" expanded="True">
-                      <Node name="Controllers" expanded="True" />
-                    </Node>
-                  </Node>
-                  <Node name="Application" expanded="True">
-                    <Node name="Socca.PlayerTransfers.Application" expanded="True">
-                      <Node name="Services" expanded="True" />
-                    </Node>
-                  </Node>
+                <Node name="FootballClub" expanded="True">
+                  <Node name="Api" expanded="True" />
+                </Node>
+                <Node name="FootballClubStadium" expanded="True">
+                  <Node name="Api" expanded="True" />
+                </Node>
+                <Node name="Players" expanded="True">
+                  <Node name="Api" expanded="True" />
                 </Node>
                 <Node name="Stadium" expanded="True">
                   <Node name="Api" expanded="True">

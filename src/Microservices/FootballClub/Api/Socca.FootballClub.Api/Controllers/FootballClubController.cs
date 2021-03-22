@@ -22,8 +22,14 @@ namespace Socca.FootballClub.Api.Controllers
             return Ok(await _service.GetFootballClubs());
         }
 
-
         [HttpPost]
+        public async Task<ActionResult> Post([FromBody] Domain.Entities.FootballClub footballClub)
+        {
+            await _service.AddFootballClub(footballClub);
+            return Ok();
+        }
+
+        [HttpPost("ListFootballClubToStadium")]
         public async Task<IActionResult> ListFootballClubToStadium([FromBody] AssignToStadium assignToStadium)
         {
             await _service.AssignToStadium(assignToStadium);

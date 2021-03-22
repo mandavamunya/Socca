@@ -24,8 +24,16 @@ namespace Socca.Players.Api.Controllers
             return Ok(await _playerService.GetPlayers());
         }
 
+
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] PlayerTransfer playerTransfer)
+        public async Task<ActionResult<IEnumerable<Player>>> Post([FromBody] Player player)
+        {
+            await _playerService.AddPlayer(player);
+            return Ok();
+        }
+
+        [HttpPost("Transfer")]
+        public async Task<IActionResult> PlayerTransfer([FromBody] PlayerTransfer playerTransfer)
         {
             await _playerService.Transfer(playerTransfer);
             return Ok();

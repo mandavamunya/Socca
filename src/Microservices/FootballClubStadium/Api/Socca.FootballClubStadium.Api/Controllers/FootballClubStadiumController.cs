@@ -21,13 +21,5 @@ namespace Socca.FootballClubStadium.Api.Controllers
             return Ok(await _service.Get());
         }
 
-        /*
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Domain.Entities.FootballClubStadium footballClubStadium)
-        {
-            await _service.AddFootballClubStadium(footballClubStadium);
-            return Ok();
-        }
-        */
     }
 }
