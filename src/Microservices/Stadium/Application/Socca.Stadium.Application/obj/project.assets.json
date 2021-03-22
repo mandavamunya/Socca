@@ -5747,7 +5747,7 @@
       "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Stadium/Application/Socca.Stadium.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
+        "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

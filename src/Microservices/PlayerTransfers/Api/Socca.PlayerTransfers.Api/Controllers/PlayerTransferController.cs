@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Socca.PlayerTransfers.Application.Interfaces;
 using Socca.PlayerTransfers.Domain.Entities;
@@ -17,9 +18,9 @@ namespace Socca.PlayerTransfers.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<PlayerTransfer>> Get()
+        public async Task<ActionResult<IEnumerable<PlayerTransfer>>> Get()
         {
-            return Ok(_playerTransferService.GetPlayerTransfers());
+            return Ok(await _playerTransferService.GetPlayerTransfers());
         }
     }
 }

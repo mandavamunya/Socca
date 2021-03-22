@@ -43,7 +43,8 @@ namespace Socca.Players.Data.Context
                     new Domain.Entities.Player()
                     {
                         FirstName = "Edinson",
-                        LastName = "Cavani"
+                        LastName = "Cavani",
+                        Position = "Forward"
                     },
                     new Domain.Entities.Player()
                     {

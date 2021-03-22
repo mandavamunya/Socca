@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,6 +36,7 @@ namespace Socca.PlayerTransfers.Api
                     c.UseSqlServer(Configuration.GetConnectionString("LinuxDbConnection")));
 
             services.AddControllers();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Socca.PlayerTransfers.Api", Version = "v1" });

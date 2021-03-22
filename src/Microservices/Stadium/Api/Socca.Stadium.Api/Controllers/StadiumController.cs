@@ -16,9 +16,9 @@ namespace Socca.Stadium.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Domain.Entities.Stadium>> Get()
+        public async Task<ActionResult<IEnumerable<Domain.Entities.Stadium>>> Get()
         {
-            return Ok(_service.GetStadiums());
+            return Ok(await _service.GetStadiums());
         }
 
         [HttpPost]

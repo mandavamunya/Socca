@@ -14,7 +14,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Api/Socca.FootballClub.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -42,6 +42,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -79,7 +85,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Application/Socca.FootballClub.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -135,7 +141,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Data/Socca.FootballClub.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -209,7 +215,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Domain/Socca.FootballClub.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
