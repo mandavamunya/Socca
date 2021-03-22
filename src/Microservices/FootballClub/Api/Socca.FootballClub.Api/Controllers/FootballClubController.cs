@@ -29,8 +29,8 @@ namespace Socca.FootballClub.Api.Controllers
             return Ok();
         }
 
-        [HttpPost("ListFootballClubToStadium")]
-        public async Task<IActionResult> ListFootballClubToStadium([FromBody] AssignToStadium assignToStadium)
+        [HttpPost("LinkFootballClubToStadium")]
+        public async Task<IActionResult> LinkFootballClubToStadium([FromBody] AssignToStadium assignToStadium)
         {
             await _service.AssignToStadium(assignToStadium);
             return Ok();
