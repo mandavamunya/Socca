@@ -1,15 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Socca.Stadium.Application.Interfaces;
 using Socca.Stadium.Application.Services;
@@ -31,6 +26,13 @@ namespace Socca.Stadium.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            if (OperatingSystem.IsWindows())
+                services.AddDbContext<StadiumDbContext>(c =>
+                    c.UseSqlServer(Configuration.GetConnectionString("WindowsDbConnection")));
+            else if (OperatingSystem.IsLinux() || OperatingSystem.IsMacOS())
+                services.AddDbContext<StadiumDbContext>(c =>
+                    c.UseSqlServer(Configuration.GetConnectionString("LinuxDbConnection")));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

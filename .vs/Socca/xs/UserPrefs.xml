@@ -8,32 +8,28 @@
           <Node name="Socca" expanded="True">
             <Node name="src" expanded="True">
               <Node name="Microservices" expanded="True">
-                <Node name="FootballClubStadium" expanded="True">
+                <Node name="FootballClub" expanded="True">
                   <Node name="Api" expanded="True" />
-                  <Node name="Data" expanded="True">
-                    <Node name="Socca.FootballClubStadium.Data" expanded="True">
-                      <Node name="Repository" expanded="True">
-                        <Node name="FootballClubStadiumRepository.cs" selected="True" />
-                      </Node>
-                    </Node>
-                  </Node>
+                </Node>
+                <Node name="FootballClubStadium" expanded="True" />
+                <Node name="Players" expanded="True">
+                  <Node name="Api" expanded="True" />
+                </Node>
+                <Node name="PlayerTransfers" expanded="True">
+                  <Node name="Api" expanded="True" />
                 </Node>
                 <Node name="Stadium" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.Stadium.Api" expanded="True">
-                      <Node name="Controllers" expanded="True" />
-                    </Node>
-                  </Node>
-                  <Node name="Application" expanded="True" />
-                  <Node name="Data" expanded="True">
-                    <Node name="Socca.Stadium.Data" expanded="True">
-                      <Node name="Repository" expanded="True" />
-                    </Node>
-                  </Node>
+                  <Node name="Api" expanded="True" />
                 </Node>
               </Node>
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>OperatingSystem.IsLinux()</Value>
+          <Value>OperatingSystem.IsMacOS()</Value>
         </State>
       </Pad>
     </Pads>

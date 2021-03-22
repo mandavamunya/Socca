@@ -1,15 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Socca.FootballClubStadium.Application.Interfaces;
 using Socca.FootballClubStadium.Application.Services;
@@ -31,6 +26,12 @@ namespace Socca.FootballClubStadium.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            if (OperatingSystem.IsWindows())
+                services.AddDbContext<FootballClubStadiumDbContext>(c =>
+                    c.UseSqlServer(Configuration.GetConnectionString("WindowsDbConnection")));
+            else if (OperatingSystem.IsLinux() || OperatingSystem.IsMacOS())
+                services.AddDbContext<FootballClubStadiumDbContext>(c =>
+                    c.UseSqlServer(Configuration.GetConnectionString("LinuxDbConnection")));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
