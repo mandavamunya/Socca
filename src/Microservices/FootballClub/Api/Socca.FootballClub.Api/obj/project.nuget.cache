@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+tDu2gYE9h7W5ZhIjaOHwQcQFim/wFQTCU0W0GhpSip5/a6xh1njxRSpUB47CllHDBjaIBZ1OnRgzt3v/z8XTg==",
+  "dgSpecHash": "F6OQpakvTXA7uVAUC+8LLlyMdqm/jva0LGRRyoKg3oCQIfRoONJuo4wM9+kguaFiPnBdJYyZU4g03UtoFCU9sA==",
   "success": true,
   "projectFilePath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Api/Socca.FootballClub.Api/Socca.FootballClub.Api.csproj",
   "expectedPackageFiles": [

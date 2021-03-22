@@ -5,18 +5,9 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Socca" expanded="True">
-            <Node name="Solution Items" expanded="True" />
-            <Node name="src" expanded="True">
-              <Node name="Microservices" expanded="True">
-                <Node name="FootballClub" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.FootballClub.Api" expanded="True">
-                      <Node name="Controllers" expanded="True" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
+          <Node name="Socca" expanded="True" selected="True">
+            <Node name="tests" expanded="True">
+              <Node name="Microservices.Tests" expanded="True" />
             </Node>
           </Node>
         </State>

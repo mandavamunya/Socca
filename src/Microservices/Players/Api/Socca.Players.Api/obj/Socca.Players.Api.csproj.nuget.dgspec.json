@@ -14,7 +14,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Api/Socca.Players.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -85,7 +85,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Application/Socca.Players.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -141,7 +141,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Data/Socca.Players.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -209,7 +209,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Domain/Socca.Players.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

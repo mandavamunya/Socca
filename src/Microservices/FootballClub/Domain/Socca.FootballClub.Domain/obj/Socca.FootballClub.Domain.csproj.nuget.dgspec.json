@@ -14,7 +14,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Domain/Socca.FootballClub.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

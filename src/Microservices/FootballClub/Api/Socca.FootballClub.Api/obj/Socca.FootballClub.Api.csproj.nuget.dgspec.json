@@ -14,7 +14,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Api/Socca.FootballClub.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -85,7 +85,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Application/Socca.FootballClub.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -141,7 +141,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Data/Socca.FootballClub.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -215,7 +215,7 @@
         "outputPath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Domain/Socca.FootballClub.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/munyaradzimandava/.nuget/NuGet/NuGet.Config"
+          "/Users/munyaradzimandava/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
