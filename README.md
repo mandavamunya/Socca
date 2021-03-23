@@ -21,6 +21,27 @@ Microservices architecture, event driven architecture, domain driven design, cle
 
 The entities FootballClubStadium and PlayerTransfer are actually event logs or history data and are not meant to be deleted. Each event must have a date occured or CreatedDate property. 
 
+A property IsCurrent will also be added to each event and therefore another update old event implementation is needed to set IsCurrent to false before adding a new event.
+
+```powershell
+    public class FootballClubStadium
+    {
+        ...
+        public DateTime DateCreated { get; set;}
+        public bool IsCurrent { get; set; }
+    }
+```
+
+```powershell
+    public class PlayerTransfer
+    {
+        ...
+        public DateTime DateCreated { get; set;}
+        public bool IsCurrent { get; set; }
+    }
+```
+
+
 # How to Run
 
 - Make sure you update the ConnectionString for each microservice to match your machine''s configuration.

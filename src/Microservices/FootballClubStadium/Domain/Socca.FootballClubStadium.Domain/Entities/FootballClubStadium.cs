@@ -5,6 +5,7 @@
         public FootballClubStadium()
         {
         }
+
         public FootballClubStadium(int footballClubId, int stadiumId)
         {
             FootballClubId = footballClubId;
@@ -16,6 +17,5 @@
         public int StadiumId { get; set; }
         // Todo: public DateTime DateCreated { get; set;}
         // Todo: public bool IsCurrent { get; set; }
-
     }
 }
