@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Jg0MKa7djOtBstfPpuknbaL2Xqng4lCwF57wpD4VoCA/E2F9ahjyjgYD4/b2fxYHB6E5q5kpG1hQq/U56JbMpw==",
+  "dgSpecHash": "O/IABPriHNLZI12w5dBXlEHmqzWI+p3v05cWtpPOCBIQW9b/NyLGKvf2R17QFq5VxpxbwmeesFOJsXkgvHYeGQ==",
   "success": true,
   "projectFilePath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Data/Socca.FootballClub.Data/Socca.FootballClub.Data.csproj",
   "expectedPackageFiles": [
     "/Users/munyaradzimandava/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/munyaradzimandava/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.data.sqlclient/2.0.1/microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.0.1/microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

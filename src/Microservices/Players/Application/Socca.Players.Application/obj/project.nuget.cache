@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+osb2oxWVVp0D4ByWGNEVnNx/w4CB4vfiwGTvcy3YQqvkGioXLKTT4DiRXN1pOxhNT+FOUimLvo+08neDcCe0g==",
+  "dgSpecHash": "lpngxqa0fYcyO7jdwF3G7v91FbcY/hsHEjHng2a22NoYlx63LNUk6GTQPzai42lnmSfcv1WSNuHVyLBa5eeHjA==",
   "success": true,
   "projectFilePath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Application/Socca.Players.Application/Socca.Players.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/munyaradzimandava/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.data.sqlclient/2.0.1/microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.0.1/microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

@@ -1,4 +1,5 @@
 using System;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +12,10 @@ using Socca.FootballClub.Application.Interfaces;
 using Socca.FootballClub.Application.Services;
 using Socca.FootballClub.Data.Context;
 using Socca.FootballClub.Data.Repository;
+using Socca.FootballClub.Domain.CommandHandlers;
+using Socca.FootballClub.Domain.Commands;
 using Socca.FootballClub.Domain.Interfaces;
+using Socca.Infrastructure.IoC;
 
 namespace Socca.FootballClub.Api
 {
@@ -41,9 +45,25 @@ namespace Socca.FootballClub.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Socca.FootballClub.Api", Version = "v1" });
             });
+
+            RegisterServices(services);
+        }
+
+        private void RegisterServices(IServiceCollection services)
+        {
+
+            // Data
             services.AddTransient<IFootballClubRepository, FootballClubRepository>();
-            services.AddTransient<IFootballClubService, FootballClubService>();
             services.AddTransient<FootballClubDbContext>();
+
+            // Application Services
+            services.AddTransient<IFootballClubService, FootballClubService>();
+
+            // Commands
+            services.AddTransient<IRequestHandler<CreateLinkToStadiumCommand, bool>, LinkToStadiumCommandHandler>();
+
+            // Infrastructure e.g. Bus
+            DependencyContainer.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

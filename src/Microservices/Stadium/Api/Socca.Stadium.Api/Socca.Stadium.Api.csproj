@@ -19,5 +19,8 @@
     <ProjectReference Include="..\..\Application\Socca.Stadium.Application\Socca.Stadium.Application.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.IoC\Socca.Infrastructure.IoC.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 using System;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -7,10 +8,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Socca.Domain.Core.Bus;
+using Socca.Infrastructure.IoC;
 using Socca.PlayerTransfers.Application.Interfaces;
 using Socca.PlayerTransfers.Application.Services;
 using Socca.PlayerTransfers.Data.Context;
 using Socca.PlayerTransfers.Data.Repository;
+using Socca.PlayerTransfers.Domain.EventHandlers;
+using Socca.PlayerTransfers.Domain.Events;
 using Socca.PlayerTransfers.Domain.Interfaces;
 
 namespace Socca.PlayerTransfers.Api
@@ -37,13 +42,35 @@ namespace Socca.PlayerTransfers.Api
 
             services.AddControllers();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Socca.PlayerTransfers.Api", Version = "v1" });
             });
-            services.AddTransient<IPlayerTransferService, PlayerTransferService>();
+
+            services.AddMediatR(typeof(Startup));
+
+            
+            RegisterServices(services);
+
+        }
+
+        private void RegisterServices(IServiceCollection services)
+        {
+            // Subsciptions
+            services.AddTransient<PlayerTransferEventHandler>();
+
+            // Domain Events
+            services.AddTransient<IEventHandler<PlayerTransferCreatedEvent>, PlayerTransferEventHandler>();
+
+            // Data
             services.AddTransient<IPlayerTransferRepository, PlayerTransferRepository>();
             services.AddTransient<PlayerTransferDbContext>();
+
+            // Application Services
+            services.AddTransient<IPlayerTransferService, PlayerTransferService>();
+            // Infrastructure e.g. Bus
+            DependencyContainer.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,32 +5,29 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Socca" expanded="True" selected="True">
+          <Node name="Socca" expanded="True">
             <Node name="src" expanded="True">
               <Node name="Microservices" expanded="True">
-                <Node name="FootballClub" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="tests" expanded="True">
-              <Node name="Microservices.Tests" expanded="True">
-                <Node name="FootballClub.Tests" expanded="True">
-                  <Node name="Socca.FootballClub.UnitTests" expanded="True">
-                    <Node name="ApplicationTests" expanded="True" />
+                <Node name="FootballClubStadium" expanded="True">
+                  <Node name="Api" expanded="True">
+                    <Node name="Socca.FootballClubStadium.Api" expanded="True" />
                   </Node>
                 </Node>
-                <Node name="FootballClubStadium.Tests" expanded="True">
-                  <Node name="Socca.FootballClubStadium.UnitTests" expanded="True">
-                    <Node name="DomainTests" expanded="True" />
+                <Node name="Players" expanded="True">
+                  <Node name="Api" expanded="True">
+                    <Node name="Socca.Players.Api" expanded="True" />
                   </Node>
                 </Node>
-                <Node name="Players.Tests" expanded="True">
-                  <Node name="Socca.Player.UnitTests" expanded="True">
-                    <Node name="DomainTests" expanded="True" />
+                <Node name="PlayerTransfers" expanded="True">
+                  <Node name="Api" expanded="True">
+                    <Node name="Socca.PlayerTransfers.Api" expanded="True">
+                      <Node name="Startup.cs" selected="True" />
+                    </Node>
                   </Node>
                 </Node>
-                <Node name="Stadium.Tests" expanded="True">
-                  <Node name="Socca.Stadium.UnitTests" expanded="True">
-                    <Node name="DomainTests" expanded="True" />
+                <Node name="Stadium" expanded="True">
+                  <Node name="Api" expanded="True">
+                    <Node name="Socca.Stadium.Api" expanded="True" />
                   </Node>
                 </Node>
               </Node>
@@ -43,18 +40,6 @@
           <Value>OperatingSystem.IsLinux()</Value>
           <Value>OperatingSystem.IsMacOS()</Value>
           <Value>a</Value>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Socca" expanded="True" selected="True">
-            <Node name="tests" expanded="True">
-              <Node name="Microservices.Tests" expanded="True">
-                <Node name="FootballClub.Tests" expanded="True" />
-                <Node name="FootballClubStadium.Tests" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
         </State>
       </Pad>
     </Pads>

@@ -9,14 +9,10 @@ namespace Socca.PlayerTransfers.Application.Services
     public class PlayerTransferService: IPlayerTransferService
     {
         private readonly IPlayerTransferRepository _repository;
+
         public PlayerTransferService(IPlayerTransferRepository repository)
         {
             _repository = repository;
-        }
-
-        public async Task AddPlayer(PlayerTransfer playerTransfer)
-        {
-            await _repository.Add(playerTransfer);
         }
 
         public async Task<IEnumerable<PlayerTransfer>> GetPlayerTransfers()

@@ -14,10 +14,6 @@ namespace Socca.FootballClubStadium.Application.Services
             _repository = repository;
         }
 
-        public async Task AddFootballClubStadium(Domain.Entities.FootballClubStadium stadium)
-        {
-            await _repository.Add(stadium);
-        }
 
         public async Task<IEnumerable<Domain.Entities.FootballClubStadium>> Get()
         {

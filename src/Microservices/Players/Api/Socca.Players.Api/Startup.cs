@@ -1,4 +1,5 @@
 using System;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -7,10 +8,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Socca.Infrastructure.IoC;
 using Socca.Players.Application.Interfaces;
 using Socca.Players.Application.Service;
 using Socca.Players.Data.Context;
 using Socca.Players.Data.Repository;
+using Socca.Players.Domain.CommandHandlers;
+using Socca.Players.Domain.Commands;
 using Socca.Players.Domain.Interfaces;
 
 namespace Socca.Players.Api
@@ -42,9 +46,24 @@ namespace Socca.Players.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Socca.Players.Api", Version = "v1" });
             });
+
+            RegisterServices(services);
+        }
+
+        private void RegisterServices(IServiceCollection services)
+        {
+            // Commands
+            services.AddTransient<IRequestHandler<CreatePlayerTransferCommand, bool>, PlayerTransferCommandHandler>();
+
+            // Data
             services.AddTransient<IPlayerRepository, PlayerRepository>();
-            services.AddTransient<IPlayerService, PlayerService>();
             services.AddTransient<PlayerDbContext>();
+
+            // Application Services
+            services.AddTransient<IPlayerService, PlayerService>();
+
+            // Infrastructure e.g. Bus
+            DependencyContainer.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,7 +5,6 @@ namespace Socca.FootballClubStadium.Application.Interfaces
 {
     public interface IFootballClubStadiumService
     {
-        Task AddFootballClubStadium(Domain.Entities.FootballClubStadium stadium);
         Task<IEnumerable<Domain.Entities.FootballClubStadium>> Get();
     }
 }

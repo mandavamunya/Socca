@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HzxsDgkswoNzy2lqaB6pEjEgA/Myux8A8pIXMW/t5X2U2dvFfvGW/6CnZVm10oAWtxc7PMAVKTTPLXQdMe7KKQ==",
+  "dgSpecHash": "ZsIkXxDazrbdLjd2nJvv93OdyplZ/oTf0rf4qVgV+zxgjDM1sjpXDz9nWY7Inx0WdZezjC7yIpZIooKxeCDGJg==",
   "success": true,
   "projectFilePath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Domain/Socca.Players.Domain/Socca.Players.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/munyaradzimandava/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

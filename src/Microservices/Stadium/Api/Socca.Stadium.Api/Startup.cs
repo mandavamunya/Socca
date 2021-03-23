@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Socca.Infrastructure.IoC;
 using Socca.Stadium.Application.Interfaces;
 using Socca.Stadium.Application.Services;
 using Socca.Stadium.Data.Context;
@@ -42,9 +43,21 @@ namespace Socca.Stadium.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Socca.Stadium.Api", Version = "v1" });
             });
+
+            RegisterServices(services);
+        }
+
+        private void RegisterServices(IServiceCollection services)
+        {
+            // Data
             services.AddTransient<IStadiumRepository, StadiumRepository>();
-            services.AddTransient<IStadiumService, StadiumService>();
             services.AddTransient<StadiumDbContext>();
+
+            // Application Services
+            services.AddTransient<IStadiumService, StadiumService>();
+
+            // infrastructure e.g. Bus
+            DependencyContainer.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
