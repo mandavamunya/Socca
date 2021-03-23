@@ -1,4 +1,7 @@
-# Socca
+# Assumption
+
+The football clubs do not have a permanent home stadium and can be reassigned to a new stadium before the beginning of each season.
+
 
 # Create database migrations for each microservice
 
@@ -37,3 +40,16 @@ Migrations have already been created for you however to create migration (from t
 dotnet ef migrations add InitialMigration --context stadiumdbcontext -p ../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj -s Socca.Stadium.Api.csproj -o Migrations
 ```
 
+# What's next
+
+Dockerize and use a RabbitMq docker image for a start
+Add Kubernetes support and deploy to Azure AKS
+Make use of Azure SQL Server
+
+# Outstanding work
+
+The entities FootballClubStadium and PlayerTransfer are actually event logs or history data and are not meant to be deleted. Each event must have a date occured or CreatedDate property. 
+
+
+# References
+1. Introducing CQRS, The Microsoft Press Store by Pearson [https://www.microsoftpressstore.com/articles/article.aspx?p=2248809&seqNum=3]

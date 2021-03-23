@@ -1,29 +1,21 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
   <MonoDevelop.Ide.ItemProperties.src.Microservices.FootballClubStadium.Api.Socca.FootballClubStadium.Api PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.src.Microservices.PlayerTransfers.Api.Socca.PlayerTransfers.Api PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
+    <Files>
+      <File FileName="README.md" Line="50" Column="57" />
+      <File FileName="src/Microservices/FootballClubStadium/Domain/Socca.FootballClubStadium.Domain/Entities/FootballClubStadium.cs" Line="3" Column="37" />
+      <File FileName="src/Microservices/PlayerTransfers/Domain/Socca.PlayerTransfers.Domain/Entities/PlayerTransfer.cs" Line="3" Column="32" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Socca" expanded="True">
+            <Node name="Solution Items" expanded="True" />
             <Node name="src" expanded="True">
               <Node name="Domain" expanded="True" />
               <Node name="Infrastructure" expanded="True" />
               <Node name="Microservices" expanded="True">
-                <Node name="FootballClub" expanded="True">
-                  <Node name="Application" expanded="True">
-                    <Node name="Socca.FootballClub.Application" expanded="True">
-                      <Node name="Services" expanded="True">
-                        <Node name="FootballClubService.cs" selected="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                  <Node name="Domain" expanded="True">
-                    <Node name="Socca.FootballClub.Domain" expanded="True">
-                      <Node name="Entities" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
                 <Node name="FootballClubStadium" expanded="True">
                   <Node name="Domain" expanded="True">
                     <Node name="Socca.FootballClubStadium.Domain" expanded="True">
@@ -34,7 +26,9 @@
                 <Node name="PlayerTransfers" expanded="True">
                   <Node name="Domain" expanded="True">
                     <Node name="Socca.PlayerTransfers.Domain" expanded="True">
-                      <Node name="Entities" expanded="True" />
+                      <Node name="Entities" expanded="True">
+                        <Node name="PlayerTransfer.cs" selected="True" />
+                      </Node>
                     </Node>
                   </Node>
                 </Node>
