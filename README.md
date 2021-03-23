@@ -21,6 +21,14 @@ Microservices architecture, event driven architecture, domain driven design, cle
 
 The entities FootballClubStadium and PlayerTransfer are actually event logs or history data and are not meant to be deleted. Each event must have a date occured or CreatedDate property. 
 
+# How to Run
+
+- Make sure you update the ConnectionString for each microservice to match your machine''s configuration.
+- Install rabbitmq on your machine or simple get a docker image and run it
+- You are good to go. This is a multiple startup project you can simple hit the run project button and all the projects will start. 
+
+NOTE: The steps will change once docker and kurbernetes are setup. There after no configuration will be needed before running the project.
+
 # Create database migrations for each microservice
 
 FootballClub
