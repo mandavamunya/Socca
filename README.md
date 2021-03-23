@@ -13,9 +13,9 @@ Microservices architecture, event driven architecture, domain driven design, cle
 
 # What's next
 
-Dockerize and use a RabbitMq docker image for a start
-Add Kubernetes support and deploy to Azure AKS
-Make use of Azure SQL Server
+- Dockerize and use a RabbitMq docker image for a start
+- Add Kubernetes support and deploy to Azure AKS
+- Make use of Azure SQL Server
 
 # Outstanding work
 
