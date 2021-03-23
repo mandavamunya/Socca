@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Socca.Domain.Core.Bus;
 using Socca.Players.Application.Interfaces;
 using Socca.Players.Application.Models;
+using Socca.Players.Domain.Commands;
 using Socca.Players.Domain.Entities;
 using Socca.Players.Domain.Interfaces;
 
@@ -10,9 +12,11 @@ namespace Socca.Players.Application.Service
     public class PlayerService: IPlayerService
     {
         private readonly IPlayerRepository _repository;
-        public PlayerService(IPlayerRepository repository)
+        private readonly IEventBus _bus;
+        public PlayerService(IPlayerRepository repository, IEventBus bus)
         {
             _repository = repository;
+            _bus = bus;
         }
 
         public async Task AddPlayer(Player player)
@@ -27,7 +31,12 @@ namespace Socca.Players.Application.Service
 
         public async Task Transfer(PlayerTransfer playerTransfer)
         {
-            // send command to PlayerTransfer service
+            var command = new CreatePlayerTransferCommand(
+                playerTransfer.FromTeam,
+                playerTransfer.ToTeam,
+                playerTransfer.PlayerId);
+
+            await _bus.SendCommand(command);
         }
     }
 }

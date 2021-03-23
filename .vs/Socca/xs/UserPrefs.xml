@@ -7,27 +7,35 @@
         <State name="__root__">
           <Node name="Socca" expanded="True">
             <Node name="src" expanded="True">
+              <Node name="Domain" expanded="True" />
+              <Node name="Infrastructure" expanded="True" />
               <Node name="Microservices" expanded="True">
-                <Node name="FootballClubStadium" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.FootballClubStadium.Api" expanded="True" />
+                <Node name="FootballClub" expanded="True">
+                  <Node name="Application" expanded="True">
+                    <Node name="Socca.FootballClub.Application" expanded="True">
+                      <Node name="Services" expanded="True">
+                        <Node name="FootballClubService.cs" selected="True" />
+                      </Node>
+                    </Node>
                   </Node>
-                </Node>
-                <Node name="Players" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.Players.Api" expanded="True" />
-                  </Node>
-                </Node>
-                <Node name="PlayerTransfers" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.PlayerTransfers.Api" expanded="True">
-                      <Node name="Startup.cs" selected="True" />
+                  <Node name="Domain" expanded="True">
+                    <Node name="Socca.FootballClub.Domain" expanded="True">
+                      <Node name="Entities" expanded="True" />
                     </Node>
                   </Node>
                 </Node>
-                <Node name="Stadium" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.Stadium.Api" expanded="True" />
+                <Node name="FootballClubStadium" expanded="True">
+                  <Node name="Domain" expanded="True">
+                    <Node name="Socca.FootballClubStadium.Domain" expanded="True">
+                      <Node name="Entities" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="PlayerTransfers" expanded="True">
+                  <Node name="Domain" expanded="True">
+                    <Node name="Socca.PlayerTransfers.Domain" expanded="True">
+                      <Node name="Entities" expanded="True" />
+                    </Node>
                   </Node>
                 </Node>
               </Node>

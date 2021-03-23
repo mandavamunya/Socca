@@ -2,8 +2,7 @@
 {
     public class AssignToStadium
     {
-        public AssignToStadium()
-        {
-        }
+        public int FootballClubId { get; set; }
+        public int StadiumId { get; set; }
     }
 }
