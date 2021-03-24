@@ -11,6 +11,10 @@ Microservices architecture, event driven architecture, domain driven design, cle
 - The football clubs do not have a permanent home stadium and can be reassigned to a new stadium before the beginning of each season.
 - Multiple events will be generated and possibly the event processors / consumers might take long to process hence why the use of an event bus.
 
+#Entity Relationship Diagram
+
+<img src="https://github.com/mandavamunya/Soccas/img/entity_relational_diagram.png" alt="" title="Entity Relational Diagram" align="right" height="60" />
+
 # What's next
 
 - Dockerize and use a RabbitMq docker image for a start

@@ -1,32 +1,21 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
   <MonoDevelop.Ide.ItemProperties.src.Microservices.FootballClubStadium.Api.Socca.FootballClubStadium.Api PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.src.Microservices.PlayerTransfers.Api.Socca.PlayerTransfers.Api PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Microservices/PlayerTransfers/Api/Socca.PlayerTransfers.Api/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
     <Files>
-      <File FileName="README.md" Line="26" Column="28" />
-      <File FileName="src/Microservices/FootballClubStadium/Domain/Socca.FootballClubStadium.Domain/Entities/FootballClubStadium.cs" Line="3" Column="37" />
-      <File FileName="src/Microservices/PlayerTransfers/Domain/Socca.PlayerTransfers.Domain/Entities/PlayerTransfer.cs" Line="3" Column="32" />
-      <File FileName="src/Microservices/PlayerTransfers/Api/Socca.PlayerTransfers.Api/appsettings.json" Line="1" Column="1" />
+      <File FileName="README.md" Line="19" Column="1" />
+      <File FileName="src/Microservices/FootballClubStadium/Domain/Socca.FootballClubStadium.Domain/Entities/FootballClubStadium.cs" />
+      <File FileName="src/Microservices/PlayerTransfers/Domain/Socca.PlayerTransfers.Domain/Entities/PlayerTransfer.cs" />
+      <File FileName="src/Microservices/PlayerTransfers/Api/Socca.PlayerTransfers.Api/appsettings.json" />
+      <File FileName="src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Entities/Stadium.cs" />
+      <File FileName="src/Microservices/Players/Domain/Socca.Players.Domain/Entities/Player.cs" />
+      <File FileName="src/Microservices/FootballClub/Domain/Socca.FootballClub.Domain/Entities/FootballClub.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Socca" expanded="True">
+          <Node name="Socca" expanded="True" selected="True">
             <Node name="Solution Items" expanded="True" />
-            <Node name="src" expanded="True">
-              <Node name="Domain" expanded="True" />
-              <Node name="Infrastructure" expanded="True" />
-              <Node name="Microservices" expanded="True">
-                <Node name="FootballClubStadium" expanded="True" />
-                <Node name="PlayerTransfers" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.PlayerTransfers.Api" expanded="True">
-                      <Node name="appsettings.json" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
           </Node>
         </State>
       </Pad>
