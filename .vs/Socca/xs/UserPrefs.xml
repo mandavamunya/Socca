@@ -1,39 +1,47 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
   <MonoDevelop.Ide.ItemProperties.src.Microservices.FootballClubStadium.Api.Socca.FootballClubStadium.Api PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.src.Microservices.PlayerTransfers.Api.Socca.PlayerTransfers.Api PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Microservices/Stadium/Api/Socca.Stadium.Api/appsettings.json">
+    <Files>
+      <File FileName="src/Infrastructure/Socca.Infrastructure.Bus/RabbitMQBus.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Api/Socca.Stadium.Api/Program.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Entities/Stadium.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Interfaces/IStadiumRepository.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Data/Socca.Stadium.Data/Context/StadiumDbContexSeeder.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Data/Socca.Stadium.Data/Repository/StadiumRepository.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Data/Socca.Stadium.Data/Context/SampleStadiumData.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Data/Socca.Stadium.Data/Context/StadiumDbContext.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Application/Socca.Stadium.Application/Services/StadiumService.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Application/Socca.Stadium.Application/Interfaces/IStadiumService.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Api/Socca.Stadium.Api/Startup.cs" Line="1" Column="1" />
+      <File FileName="src/Microservices/Stadium/Api/Socca.Stadium.Api/appsettings.json" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Socca" expanded="True">
             <Node name="src" expanded="True">
+              <Node name="Domain" expanded="True" />
+              <Node name="Infrastructure" expanded="True" />
               <Node name="Microservices" expanded="True">
-                <Node name="FootballClub" expanded="True">
+                <Node name="Stadium" expanded="True">
                   <Node name="Api" expanded="True">
-                    <Node name="Socca.FootballClub.Api" expanded="True" />
-                  </Node>
-                  <Node name="Application" expanded="True">
-                    <Node name="Socca.FootballClub.Application" expanded="True" />
-                  </Node>
-                  <Node name="Data" expanded="True">
-                    <Node name="Socca.FootballClub.Data" expanded="True" />
-                  </Node>
-                  <Node name="Domain" expanded="True">
-                    <Node name="Socca.FootballClub.Domain" expanded="True" />
-                  </Node>
-                </Node>
-                <Node name="Players" expanded="True">
-                  <Node name="Api" expanded="True">
-                    <Node name="Socca.Players.Api" expanded="True">
-                      <Node name="Startup.cs" selected="True" />
+                    <Node name="Socca.Stadium.Api" expanded="True">
+                      <Node name="appsettings.json" selected="True" />
                     </Node>
                   </Node>
-                  <Node name="Application" expanded="True" />
-                  <Node name="Data" expanded="True">
-                    <Node name="Socca.Players.Data" expanded="True" />
+                  <Node name="Application" expanded="True">
+                    <Node name="Socca.Stadium.Application" expanded="True">
+                      <Node name="Interfaces" expanded="True" />
+                      <Node name="Services" expanded="True" />
+                    </Node>
                   </Node>
+                  <Node name="Data" expanded="True" />
                   <Node name="Domain" expanded="True">
-                    <Node name="Socca.Players.Domain" expanded="True" />
+                    <Node name="Socca.Stadium.Domain" expanded="True">
+                      <Node name="Entities" expanded="True" />
+                      <Node name="Interfaces" expanded="True" />
+                    </Node>
                   </Node>
                 </Node>
               </Node>
