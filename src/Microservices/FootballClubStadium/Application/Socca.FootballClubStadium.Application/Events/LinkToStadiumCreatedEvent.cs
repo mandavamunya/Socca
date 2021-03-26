@@ -1,6 +1,6 @@
 ﻿using Socca.Domain.Core.Events;
 
-namespace Socca.FootballClubStadium.Domain.Events
+namespace Socca.FootballClubStadium.Application.Events
 {
     public class LinkToStadiumCreatedEvent: Event
     {

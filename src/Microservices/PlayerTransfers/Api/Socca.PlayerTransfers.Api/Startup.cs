@@ -10,12 +10,12 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Socca.Domain.Core.Bus;
 using Socca.Infrastructure.IoC;
+using Socca.PlayerTransfers.Application.EventHandlers;
+using Socca.PlayerTransfers.Application.Events;
 using Socca.PlayerTransfers.Application.Interfaces;
 using Socca.PlayerTransfers.Application.Services;
 using Socca.PlayerTransfers.Data.Context;
 using Socca.PlayerTransfers.Data.Repository;
-using Socca.PlayerTransfers.Domain.EventHandlers;
-using Socca.PlayerTransfers.Domain.Events;
 using Socca.PlayerTransfers.Domain.Interfaces;
 
 namespace Socca.PlayerTransfers.Api

@@ -7,9 +7,6 @@
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Commands\" />
-    <Folder Include="CommandHandlers\" />
-    <Folder Include="Events\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Domain\Socca.Domain.Core\Socca.Domain.Core.csproj" />

@@ -1,6 +1,6 @@
 ﻿using Socca.Domain.Core.Events;
 
-namespace Socca.PlayerTransfers.Domain.Events
+namespace Socca.PlayerTransfers.Application.Events
 {
     public class PlayerTransferCreatedEvent : Event
     {

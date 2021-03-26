@@ -2,10 +2,10 @@
 using System.Threading.Tasks;
 using MediatR;
 using Socca.Domain.Core.Bus;
-using Socca.Players.Domain.Commands;
-using Socca.Players.Domain.Events;
+using Socca.Players.Application.Commands;
+using Socca.Players.Application.Events;
 
-namespace Socca.Players.Domain.CommandHandlers
+namespace Socca.Players.Application.CommandHandlers
 {
 
     public class PlayerTransferCommandHandler : IRequestHandler<CreatePlayerTransferCommand, bool>

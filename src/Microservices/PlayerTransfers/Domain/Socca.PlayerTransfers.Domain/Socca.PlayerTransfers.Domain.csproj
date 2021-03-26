@@ -7,8 +7,6 @@
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Events\" />
-    <Folder Include="EventHandlers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.Bus\Socca.Infrastructure.Bus.csproj" />

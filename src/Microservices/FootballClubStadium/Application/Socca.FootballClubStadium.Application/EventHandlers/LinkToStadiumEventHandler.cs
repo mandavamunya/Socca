@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Socca.Domain.Core.Bus;
-using Socca.FootballClubStadium.Domain.Events;
+using Socca.FootballClubStadium.Application.Events;
 using Socca.FootballClubStadium.Domain.Interfaces;
 
-namespace Socca.FootballClubStadium.Domain.EventHandlers
+namespace Socca.FootballClubStadium.Application.EventHandlers
 {
     public class LinkToStadiumEventHandler : IEventHandler<LinkToStadiumCreatedEvent>
     {

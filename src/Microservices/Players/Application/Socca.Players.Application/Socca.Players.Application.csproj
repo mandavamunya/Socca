@@ -6,8 +6,11 @@
 
   <ItemGroup>
     <Folder Include="Service\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Models\" />
+    <Folder Include="CommandHandlers\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Events\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Socca.Players.Data\Socca.Players.Data.csproj" />

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Socca.Domain.Core.Bus;
+using Socca.Players.Application.Commands;
 using Socca.Players.Application.Interfaces;
 using Socca.Players.Application.Models;
-using Socca.Players.Domain.Commands;
 using Socca.Players.Domain.Entities;
 using Socca.Players.Domain.Interfaces;
 

@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Socca.Domain.Core.Bus;
+using Socca.PlayerTransfers.Application.Events;
 using Socca.PlayerTransfers.Domain.Entities;
-using Socca.PlayerTransfers.Domain.Events;
 using Socca.PlayerTransfers.Domain.Interfaces;
 
-namespace Socca.PlayerTransfers.Domain.EventHandlers
+namespace Socca.PlayerTransfers.Application.EventHandlers
 {
     public class PlayerTransferEventHandler : IEventHandler<PlayerTransferCreatedEvent>
     {

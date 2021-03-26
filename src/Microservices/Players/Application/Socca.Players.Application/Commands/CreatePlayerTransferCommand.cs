@@ -1,4 +1,4 @@
-﻿namespace Socca.Players.Domain.Commands
+﻿namespace Socca.Players.Application.Commands
 {
     public class CreatePlayerTransferCommand : PlayerTransferCommand
     {

@@ -9,12 +9,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Socca.Infrastructure.IoC;
+using Socca.Players.Application.CommandHandlers;
+using Socca.Players.Application.Commands;
 using Socca.Players.Application.Interfaces;
 using Socca.Players.Application.Service;
 using Socca.Players.Data.Context;
 using Socca.Players.Data.Repository;
-using Socca.Players.Domain.CommandHandlers;
-using Socca.Players.Domain.Commands;
 using Socca.Players.Domain.Interfaces;
 
 namespace Socca.Players.Api

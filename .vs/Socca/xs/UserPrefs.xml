@@ -1,29 +1,44 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
   <MonoDevelop.Ide.ItemProperties.src.Microservices.FootballClubStadium.Api.Socca.FootballClubStadium.Api PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.src.Microservices.PlayerTransfers.Api.Socca.PlayerTransfers.Api PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
-    <Files>
-      <File FileName="README.md" Line="19" Column="1" />
-      <File FileName="src/Microservices/FootballClubStadium/Domain/Socca.FootballClubStadium.Domain/Entities/FootballClubStadium.cs" />
-      <File FileName="src/Microservices/PlayerTransfers/Domain/Socca.PlayerTransfers.Domain/Entities/PlayerTransfer.cs" />
-      <File FileName="src/Microservices/PlayerTransfers/Api/Socca.PlayerTransfers.Api/appsettings.json" />
-      <File FileName="src/Microservices/Stadium/Domain/Socca.Stadium.Domain/Entities/Stadium.cs" />
-      <File FileName="src/Microservices/Players/Domain/Socca.Players.Domain/Entities/Player.cs" />
-      <File FileName="src/Microservices/FootballClub/Domain/Socca.FootballClub.Domain/Entities/FootballClub.cs" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Socca" expanded="True" selected="True">
-            <Node name="Solution Items" expanded="True" />
+          <Node name="Socca" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="Microservices" expanded="True">
+                <Node name="FootballClub" expanded="True">
+                  <Node name="Api" expanded="True">
+                    <Node name="Socca.FootballClub.Api" expanded="True" />
+                  </Node>
+                  <Node name="Application" expanded="True">
+                    <Node name="Socca.FootballClub.Application" expanded="True" />
+                  </Node>
+                  <Node name="Data" expanded="True">
+                    <Node name="Socca.FootballClub.Data" expanded="True" />
+                  </Node>
+                  <Node name="Domain" expanded="True">
+                    <Node name="Socca.FootballClub.Domain" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="Players" expanded="True">
+                  <Node name="Api" expanded="True">
+                    <Node name="Socca.Players.Api" expanded="True">
+                      <Node name="Startup.cs" selected="True" />
+                    </Node>
+                  </Node>
+                  <Node name="Application" expanded="True" />
+                  <Node name="Data" expanded="True">
+                    <Node name="Socca.Players.Data" expanded="True" />
+                  </Node>
+                  <Node name="Domain" expanded="True">
+                    <Node name="Socca.Players.Domain" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>OperatingSystem.IsLinux()</Value>
-          <Value>OperatingSystem.IsMacOS()</Value>
-          <Value>a</Value>
         </State>
       </Pad>
     </Pads>

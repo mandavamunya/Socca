@@ -1,6 +1,6 @@
 ﻿using Socca.Domain.Core.Commands;
 
-namespace Socca.Players.Domain.Commands
+namespace Socca.Players.Application.Commands
 {
 
     public abstract class PlayerTransferCommand : Command

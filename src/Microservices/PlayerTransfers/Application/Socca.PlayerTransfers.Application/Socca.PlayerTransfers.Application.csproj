@@ -7,6 +7,8 @@
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="EventHandlers\" />
+    <Folder Include="Events\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Socca.PlayerTransfers.Data\Socca.PlayerTransfers.Data.csproj" />
