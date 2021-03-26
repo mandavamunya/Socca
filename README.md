@@ -13,7 +13,8 @@ Microservices architecture, event driven architecture, domain driven design, cle
 
 # Entity Relationship Diagram
 
-<img src="https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png" alt="" title="Entity Relational Diagram" align="right" width="500" height="600" />
+<!--<img src="https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png" alt="" title="Entity Relational Diagram" align="right" width="500" height="600" />-->
+![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
 
 NOTE: Relationships still need to be updated.
 
