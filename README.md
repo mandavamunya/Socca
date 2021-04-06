@@ -1,6 +1,6 @@
 # Technology used
 
-.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger
+.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker
 
 # Topics cover
 
@@ -20,7 +20,7 @@ NOTE: Relationships still need to be updated.
 
 # What's next
 
-- Dockerize and use a RabbitMq docker image for a start
+- Dockerize and use a RabbitMq docker image
 - Add Kubernetes support and deploy to Azure AKS
 - Make use of Azure SQL Server
 

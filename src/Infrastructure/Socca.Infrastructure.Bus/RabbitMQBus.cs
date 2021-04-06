@@ -21,6 +21,8 @@ namespace Socca.Infrastructure.Bus
         private readonly List<Type> _eventTypes;
         private readonly IServiceScopeFactory _serviceScopeFactory;
 
+        private const string _hostName = "<SERVER_NAME>";
+
         public RabbitMQBus(IMediator mediator, IServiceScopeFactory serviceScopeFactory)
         {
             _mediator = mediator;
@@ -36,7 +38,7 @@ namespace Socca.Infrastructure.Bus
 
         public void Publish<T>(T @event) where T : Event
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory() { HostName = _hostName };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
@@ -81,7 +83,7 @@ namespace Socca.Infrastructure.Bus
         private void StartBasicConsume<T>() where T : Event
         {
             var factory = new ConnectionFactory() {
-                HostName = "localhost",
+                HostName = _hostName,
                 DispatchConsumersAsync = true
             };
 
