@@ -22,6 +22,7 @@ namespace Socca.FootballClubStadium.Api
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -47,6 +48,18 @@ namespace Socca.FootballClubStadium.Api
             });
 
             services.AddMediatR(typeof(Startup));
+
+            // Add memory cache services
+            services.AddMemoryCache();
+            services.AddHsts(options =>
+            {
+                options.Preload = true;
+                options.IncludeSubDomains = true;
+                options.MaxAge = TimeSpan.FromDays(60);
+                //options.ExcludedHosts.Add("example.com");
+                //options.ExcludedHosts.Add("www.example.com");
+            });
+
 
             RegisterServices(services);
         }
@@ -76,6 +89,13 @@ namespace Socca.FootballClubStadium.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Socca.FootballClubStadium.Api v1"));
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Socca.FootballClubStadium.Api v1"));
             }

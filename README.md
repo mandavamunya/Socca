@@ -11,10 +11,10 @@ Microservices architecture, event driven architecture, domain driven design, cle
 - The football clubs do not have a permanent home stadium and can be reassigned to a new stadium before the beginning of each season.
 - Multiple events will be generated and possibly the event processors / consumers might take long to process hence why the use of an event bus.
 
-# Entity Relationship Diagram
+<!--# Entity Relationship Diagram-->
 
 <!--<img src="https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png" alt="" title="Entity Relational Diagram" align="right" width="500" height="600" />-->
-![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
+<!--![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)-->
 
 NOTE: Relationships still need to be updated.
 
@@ -57,6 +57,33 @@ A property IsCurrent will also be added to each event and therefore another upda
 
 NOTE: The steps will change once docker and kurbernetes are setup. There after no configuration will be needed before running the project.
 
+# Dockerizing
+Create a network by running the following command:
+```powershell
+docker network create nat
+```
+
+#MSSQL DB
+
+Pull MSSQL docker image:
+```powershell
+sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+```
+Run MSSQL docker image:
+```powershell
+sudo docker run -d --name Mssqldb -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password2021' -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest
+```
+
+Execute MSSQL docker image:
+```powershell
+sudo docker exec -it Mssqldb "bash"/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Password2021"
+```
+
+Run a quick test:
+```powershell
+SELECT @@versionGO
+```
+
 # Create database migrations for each microservice
 
 FootballClub
@@ -95,5 +122,8 @@ dotnet ef migrations add InitialMigration --context stadiumdbcontext -p ../../Da
 ```
 
 
+
+
 # References
 1. Introducing CQRS, The Microsoft Press Store by Pearson [https://www.microsoftpressstore.com/articles/article.aspx?p=2248809&seqNum=3]
+2. https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-deployment?view=sql-server-ver15&pivots=cs1-bash
