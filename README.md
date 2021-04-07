@@ -19,7 +19,7 @@ Microservices architecture, event driven architecture, clean architetcure, unit 
 <!--NOTE: Relationships still need to be updated.-->
 
 # What's next
-
+- Update documenation
 - Add Kubernetes support and deploy to Azure AK
 - Make use of Azure SQL Server
 
