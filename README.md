@@ -4,7 +4,7 @@
 
 # Topics cover
 
-Microservices architecture, event driven architecture, domain driven design, clean architetcure, unit test 
+Microservices architecture, event driven architecture, clean architetcure, unit test 
 
 # Assumption
 
@@ -16,12 +16,11 @@ Microservices architecture, event driven architecture, domain driven design, cle
 <!--<img src="https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png" alt="" title="Entity Relational Diagram" align="right" width="500" height="600" />-->
 <!--![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)-->
 
-NOTE: Relationships still need to be updated.
+<!--NOTE: Relationships still need to be updated.-->
 
 # What's next
 
-- Dockerize and use a RabbitMq docker image
-- Add Kubernetes support and deploy to Azure AKS
+- Add Kubernetes support and deploy to Azure AK
 - Make use of Azure SQL Server
 
 # Outstanding work
