@@ -1,6 +1,6 @@
 # Technology used
 
-.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kurbernetes, Azure AKS, Azure SQL Server
+.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kurbernetes, Azure AKS, Azure SQL Server, Redis Cache, React
 
 # Topics cover
 
@@ -20,10 +20,13 @@ Microservices architecture, event driven architecture, clean architetcure, unit 
 
 # What's next
 - Update documenation
+- Add React frontend application
 - Add Kubernetes support and deploy to Azure AKS
 - Make use of Azure SQL Server
+- Add centralized caching: Redis Cache
 - Add more unit tests
 - Add functional tests and integration tests
+
 
 ## Outstanding work
 
