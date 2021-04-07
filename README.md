@@ -22,6 +22,8 @@ Microservices architecture, event driven architecture, clean architetcure, unit 
 - Update documenation
 - Add Kubernetes support and deploy to Azure AKS
 - Make use of Azure SQL Server
+- Add more unit tests
+- Add functional tests and integration tests
 
 # Outstanding work
 
