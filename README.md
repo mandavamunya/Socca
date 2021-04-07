@@ -62,7 +62,7 @@ Create a network by running the following command:
 docker network create nat
 ```
 
-#MSSQL DB
+## MSSQL DB
 
 Pull MSSQL docker image:
 ```powershell
@@ -73,6 +73,7 @@ Run MSSQL docker image:
 sudo docker run -d --name Mssqldb -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password2021' -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest
 ```
 
+<!--
 Execute MSSQL docker image:
 ```powershell
 sudo docker exec -it Mssqldb "bash"/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Password2021"
@@ -82,6 +83,7 @@ Run a quick test:
 ```powershell
 SELECT @@versionGO
 ```
+-->
 
 # Create database migrations for each microservice
 
