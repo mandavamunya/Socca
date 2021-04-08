@@ -75,7 +75,7 @@ A distributed cache service was added to keep track of each application client's
 ![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
 
 As an example we are only going to save the state of the FootballClubStadium and PlayerTransfers entities i.e. LinkToStadiumCreatedEvent and PlayerTransferCreatedEvent respectively.
-In real life scenarios the Stadium, Player, FootballClub entities are actually look up data and therefore do not change that much.
+In real life scenarios the Stadium, Player, FootballClub entities are actually look up data and do not get changed that often.
 ## Outstanding work
 
 The entities FootballClubStadium and PlayerTransfer are actually event logs or history data and are not meant to be deleted. Each event must have a date occured or CreatedDate property. 
