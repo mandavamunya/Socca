@@ -14,7 +14,7 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 <!--# Entity Relationship Diagram-->
 
 <!--<img src="https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png" alt="" title="Entity Relational Diagram" align="right" width="500" height="600" />-->
-<!--![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)-->
+
 
 <!--NOTE: Relationships still need to be updated.-->
 
@@ -52,7 +52,11 @@ Sticky persistence: in the case that the session state is saved in an in-memory 
 
 A distributed cache service was added to keep track of each application client's state. Only the current state of the client is saved in redis cache. 
 
+### Entity Relationship Diagram (ERD) for the application states that will be saved in the database.
+![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
+
 # In progress
+
 - Add centralized caching: Redis Cache
 
 # What's next
