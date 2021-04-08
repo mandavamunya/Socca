@@ -1,10 +1,10 @@
 # Technology used
-Microsoft.Extensions.Caching.StackExchangeRedis
+
 .Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kurbernetes, Azure AKS, Azure SQL Server, Redis Cache, React
 
 # Topics cover
 
-Microservices architecture, event driven architecture, CQRS, event sourcing, clean architetcure, unit testS 
+Microservices architecture, event driven architecture, CQRS, event sourcing, clean architetcure, unit tests 
 
 # Assumption
 
@@ -97,14 +97,65 @@ A property IsCurrent will also be added to each event and therefore another upda
 NOTE: The steps will change once docker and kurbernetes are setup. There after no configuration will be needed before running the project.
 
 # Dockerizing
-Create a network by running the following command:
+
+## Important docker commands
+
+List all images:
 ```powershell
-docker network create socca
+docker images
+```
+
+List all containers:
+```powershell
+docker ps
+```
+
+Delete every Docker containers:
+```powershell
+docker-compose down 
+```
+
+Remove all docker containers:
+
+```powershell
+docker rm -f $(docker ps -a -q)
+```
+
+Delete a docker container with CONTAINER ID 10e62ea29d83:
+
+```powershell
+docker rm –f 10e62ea29d83
+```
+
+Delete all docker images:
+```powershell
+docker rmi -f $(docker images -q)
+```
+
+Delete a docker image with IMAGE ID 870fda08c907:
+```powershell
+docker rmi –f 870fda08c907
+```
+
+Build your application:
+```powershell
+docker-compose build
+```
+
+```powershell
+Run your application: docker-compose up
+```
+
+You migh be prompted to create a network. Create a network by running the following command:
+
+```powershell
+docker network create soccanet
 ```
 
 ## Rabbit Mq docker image for testing on my local MAC
-
+```powershell
 docker pull rabbitmq
+```
 
 ## MSSQL DB docker image for testing on my local MAC
 
@@ -171,4 +222,5 @@ dotnet ef migrations add InitialMigration --context stadiumdbcontext -p ../../Da
 
 # References
 1. Introducing CQRS, The Microsoft Press Store by Pearson [https://www.microsoftpressstore.com/articles/article.aspx?p=2248809&seqNum=3]
-2. https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-deployment?view=sql-server-ver15&pivots=cs1-bash
+2. [https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-deployment?view=sql-server-ver15&pivots=cs1-bash]
+3. [https://www.nginx.com/resources/glossary/load-balancing/]
