@@ -8,6 +8,7 @@
     <Folder Include="Commands\" />
     <Folder Include="Events\" />
     <Folder Include="Bus\" />
+    <Folder Include="DistributedCache\" />
   </ItemGroup>
 
   <ItemGroup>

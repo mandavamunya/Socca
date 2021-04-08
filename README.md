@@ -4,7 +4,7 @@
 
 # Topics cover
 
-Microservices architecture, event driven architecture, clean architetcure, unit test 
+Microservices architecture, event driven architecture, CQRS, event sourcing, clean architetcure, unit testS 
 
 # Assumption
 
@@ -17,6 +17,36 @@ Microservices architecture, event driven architecture, clean architetcure, unit 
 <!--![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)-->
 
 <!--NOTE: Relationships still need to be updated.-->
+
+## Important RabbitMq Commands
+
+rabbitmqctl stop_app
+rabbitmqctl start_app
+rabbitmqctl reset
+rabbitmqctl add_user test test 
+rabbitmqctl set_user_tags test administrator
+rabbitmqctl set_permissions -p / test ".*" ".*" ".*"
+
+# Redis Cache and Kubernetes
+
+## Define Redis Cache
+?
+
+## Define Kubernetes
+?
+
+## Considerations should be made when load balancing a web app? 
+The way states are managed in a web application (session persistence) has an impact  on the load balancing configuration and scalability.
+
+Non sticky persistence: in the case that the session state is saved in a distributed cache or database (e.g. Redis Cache). The load balancer can route requests to any web server that has access to that distributed cache. 
+
+Sticky persistence: in the case that the session state is saved in an in-memory cache which is an in-process memory state in the web server. The load balancer must route the requests or traffic from the client to a specific web server that saved its session state.
+
+
+## Event Sourcing
+
+A distributed cache service was added to keep track of each application client's state. Only the current state of the client is saved in redis cache. 
+
 
 # What's next
 - Update documenation
@@ -64,7 +94,7 @@ NOTE: The steps will change once docker and kurbernetes are setup. There after n
 # Dockerizing
 Create a network by running the following command:
 ```powershell
-docker network create nat
+docker network create socca
 ```
 
 ## MSSQL DB

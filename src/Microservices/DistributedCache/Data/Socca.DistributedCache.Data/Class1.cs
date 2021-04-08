@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Socca.Common.IoC
+namespace Socca.DistributedCache.Data
 {
     public class Class1
     {
