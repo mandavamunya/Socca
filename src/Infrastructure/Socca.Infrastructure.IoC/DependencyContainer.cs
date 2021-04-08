@@ -16,7 +16,6 @@ namespace Socca.Infrastructure.IoC
                 return new RabbitMQBus(sp.GetService<IMediator>(), scopeFactory);
             });
 
-            // You can also add centralized caching e.g. Redis Cache
         }
 
     }

@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="EventHandlers\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\FootballClubStadium\Data\Socca.FootballClubStadium.Data\Socca.FootballClubStadium.Data.csproj" />
+  </ItemGroup>
 </Project>

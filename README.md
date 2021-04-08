@@ -69,6 +69,7 @@ A distributed cache service was added to keep track of each application client's
 ### Entity Relationship Diagram (ERD) for the application states that will be saved in the distributed Redis cache.
 ![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
 
+As an example we are going only going to save the state for the LinkToStadium and PlayerTransfer events.
 
 ## Outstanding work
 
