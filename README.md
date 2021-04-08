@@ -4,7 +4,7 @@
 
 # Topics cover
 
-Microservices architecture, event driven architecture, CQRS, event sourcing, clean architetcure, unit tests 
+Microservices architecture, event driven architecture, CQRS, event sourcing, clean architecture, unit tests 
 
 
 # Assumptions

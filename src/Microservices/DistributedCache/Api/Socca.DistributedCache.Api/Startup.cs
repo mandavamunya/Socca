@@ -13,8 +13,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Socca.DistributedCache.Application.EventHandlers;
 using Socca.DistributedCache.Application.Events;
-using Socca.DistributedCache.Application.Interfaces;
-using Socca.DistributedCache.Application.Services;
 using Socca.DistributedCache.Data.Context;
 using Socca.DistributedCache.Domain.Interfaces;
 using Socca.Domain.Core.Bus;
