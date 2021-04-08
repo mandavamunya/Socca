@@ -9,8 +9,13 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 
 # Assumption
 
-- The football clubs do not have a permanent home stadium and can be reassigned to a new stadium before the beginning of each season.
+- The football clubs do not have a permanent home stadiums and can be reassigned to a new stadium before the beginning of each season.
 - Multiple events will be generated and possibly the event processors / consumers might take long to process hence why the use of an event bus.
+
+## Requirements
+
+- Events are generated when a football player is transfered between teams. 
+- Events are generated when linking a football team to a stadium.
 
 # In progress
 
@@ -69,8 +74,8 @@ A distributed cache service was added to keep track of each application client's
 ### Entity Relationship Diagram (ERD) for the application states that will be saved in the distributed Redis cache.
 ![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
 
-As an example we are going only going to save the state for the LinkToStadium and PlayerTransfer events.
-
+As an example we are going only going to save the state for the FootballClubStadium and PlayerTransfers entities i.e. LinkToStadiumCreatedEvent and PlayerTransferCreatedEvent respectively.
+In real life scenarios the Stadium, Player, FootballClub entities are actually look up data and therefore do not change that much.
 ## Outstanding work
 
 The entities FootballClubStadium and PlayerTransfer are actually event logs or history data and are not meant to be deleted. Each event must have a date occured or CreatedDate property. 
