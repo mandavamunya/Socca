@@ -15,6 +15,8 @@ using Socca.DistributedCache.Application.EventHandlers;
 using Socca.DistributedCache.Application.Events;
 using Socca.DistributedCache.Application.Interfaces;
 using Socca.DistributedCache.Application.Services;
+using Socca.DistributedCache.Data.Context;
+using Socca.DistributedCache.Domain.Interfaces;
 using Socca.Domain.Core.Bus;
 using Socca.Infrastructure.IoC;
 
@@ -47,16 +49,14 @@ namespace Socca.DistributedCache.Api
         {
             // Subsciptions
             services.AddTransient<PlayerTransferEventHandler>();
+            services.AddTransient<LinkToStadiumEventHandler>();
 
             // Domain Events
-            // services.AddTransient<IEventHandler<PlayerTransferCreatedEvent>, PlayerTransferEventHandler>();
+            services.AddTransient<IEventHandler<PlayerTransferCreatedEvent>, PlayerTransferEventHandler>();
+            services.AddTransient<IEventHandler<LinkToStadiumCreatedEvent>, LinkToStadiumEventHandler>();
 
             // Data
-            // services.AddTransient<IDistributedCacheRepository, DistributedCacheRepository>();
-
-            // Application Services
-            services.AddTransient<IFootballClubStadiumCacheService, FootballClubStadiumCacheService>();
-            services.AddTransient<IPlayerTransferCacheService, PlayerTransferCacheService>();
+            services.AddScoped(typeof(IDistributedCacheRepository<>), typeof(DistributedCacheRepository<>));
 
             // Infrastructure e.g. Bus
             DependencyContainer.RegisterServices(services);

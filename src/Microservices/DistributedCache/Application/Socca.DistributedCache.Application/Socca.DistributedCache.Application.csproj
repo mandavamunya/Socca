@@ -7,10 +7,8 @@
   <ItemGroup>
     <Folder Include="Events\" />
     <Folder Include="EventHandlers\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FootballClubStadium\Data\Socca.FootballClubStadium.Data\Socca.FootballClubStadium.Data.csproj" />
+    <ProjectReference Include="..\..\Data\Socca.DistributedCache.Data\Socca.DistributedCache.Data.csproj" />
   </ItemGroup>
 </Project>

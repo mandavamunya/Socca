@@ -1,9 +1,18 @@
-﻿namespace Socca.DistributedCache.Application.Events
+﻿using Socca.Domain.Core.Events;
+
+namespace Socca.DistributedCache.Application.Events
 {
-    public class PlayerTransferCreatedEvent
+    public class PlayerTransferCreatedEvent : Event
     {
-        public PlayerTransferCreatedEvent()
+        public int From { get; private set; }
+        public int To { get; private set; }
+        public int PlayerId { get; private set; }
+
+        public PlayerTransferCreatedEvent(int from, int to, int playerId)
         {
+            From = from;
+            To = to;
+            PlayerId = playerId;
         }
     }
 }

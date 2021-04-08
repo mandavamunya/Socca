@@ -1,9 +1,32 @@
-﻿namespace Socca.DistributedCache.Application.EventHandlers
+﻿using System.Threading.Tasks;
+using Socca.DistributedCache.Application.Events;
+using Socca.DistributedCache.Domain.Entities;
+using Socca.DistributedCache.Domain.Interfaces;
+using Socca.Domain.Core.Bus;
+
+namespace Socca.DistributedCache.Application.EventHandlers
 {
-    public class PlayerTransferEventHandler
+    public class PlayerTransferEventHandler : IEventHandler<PlayerTransferCreatedEvent>
     {
-        public PlayerTransferEventHandler()
+        private readonly IDistributedCacheRepository<PlayerTransfer> _repository;
+
+        public PlayerTransferEventHandler(IDistributedCacheRepository<PlayerTransfer> repository)
         {
+            _repository = repository;
+        }
+
+        public Task Handle(PlayerTransferCreatedEvent @event)
+        {
+            _repository.Update(
+                @event.PlayerId.ToString(),
+                new PlayerTransfer()
+            {
+                FromTeam = @event.From,
+                ToTeam = @event.To,
+                PlayerId = @event.PlayerId,
+            });
+
+            return Task.CompletedTask;
         }
     }
 }

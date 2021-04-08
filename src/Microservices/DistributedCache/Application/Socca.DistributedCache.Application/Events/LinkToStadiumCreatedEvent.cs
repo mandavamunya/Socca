@@ -1,9 +1,16 @@
-﻿namespace Socca.DistributedCache.Application.Events
+﻿using Socca.Domain.Core.Events;
+
+namespace Socca.DistributedCache.Application.Events
 {
-    public class LinkToStadiumCreatedEvent
+    public class LinkToStadiumCreatedEvent : Event
     {
-        public LinkToStadiumCreatedEvent()
+        public int FootballClubId { get; private set; }
+        public int StadiumId { get; private set; }
+
+        public LinkToStadiumCreatedEvent(int footballClubId, int stadiumId)
         {
+            FootballClubId = footballClubId;
+            StadiumId = stadiumId;
         }
     }
 }

@@ -8,4 +8,7 @@
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.Bus\Socca.Infrastructure.Bus.csproj" />
+  </ItemGroup>
 </Project>
