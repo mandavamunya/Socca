@@ -6,10 +6,24 @@
 
 Microservices architecture, event driven architecture, CQRS, event sourcing, clean architetcure, unit tests 
 
+
 # Assumption
 
 - The football clubs do not have a permanent home stadium and can be reassigned to a new stadium before the beginning of each season.
 - Multiple events will be generated and possibly the event processors / consumers might take long to process hence why the use of an event bus.
+
+# In progress
+
+- Add centralized caching: Redis Cache
+
+# What's next
+- Update documenation
+- Add React frontend application
+- Add Kubernetes support and deploy to Azure AKS
+- Make use of Azure SQL Server
+- Add more unit tests
+- Add functional tests and integration tests
+
 
 <!--# Entity Relationship Diagram-->
 
@@ -54,18 +68,6 @@ A distributed cache service was added to keep track of each application client's
 
 ### Entity Relationship Diagram (ERD) for the application states that will be saved in the distributed Redis cache.
 ![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
-
-# In progress
-
-- Add centralized caching: Redis Cache
-
-# What's next
-- Update documenation
-- Add React frontend application
-- Add Kubernetes support and deploy to Azure AKS
-- Make use of Azure SQL Server
-- Add more unit tests
-- Add functional tests and integration tests
 
 
 ## Outstanding work
