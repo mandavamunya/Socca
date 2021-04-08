@@ -1,5 +1,5 @@
 # Technology used
-
+Microsoft.Extensions.Caching.StackExchangeRedis
 .Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kurbernetes, Azure AKS, Azure SQL Server, Redis Cache, React
 
 # Topics cover
@@ -21,10 +21,15 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 ## Important RabbitMq Commands
 
 rabbitmqctl stop_app
+
 rabbitmqctl start_app
+
 rabbitmqctl reset
-rabbitmqctl add_user test test 
+
+rabbitmqctl add_user test test
+
 rabbitmqctl set_user_tags test administrator
+
 rabbitmqctl set_permissions -p / test ".*" ".*" ".*"
 
 # Redis Cache and Kubernetes
@@ -35,7 +40,7 @@ rabbitmqctl set_permissions -p / test ".*" ".*" ".*"
 ## Define Kubernetes
 ?
 
-## Considerations should be made when load balancing a web app? 
+## Considerations should be made when load balancing a web app
 The way states are managed in a web application (session persistence) has an impact  on the load balancing configuration and scalability.
 
 Non sticky persistence: in the case that the session state is saved in a distributed cache or database (e.g. Redis Cache). The load balancer can route requests to any web server that has access to that distributed cache. 
@@ -97,7 +102,11 @@ Create a network by running the following command:
 docker network create socca
 ```
 
-## MSSQL DB
+## Rabbit Mq docker image for testing on my local MAC
+
+docker pull rabbitmq
+
+## MSSQL DB docker image for testing on my local MAC
 
 Pull MSSQL docker image:
 ```powershell
