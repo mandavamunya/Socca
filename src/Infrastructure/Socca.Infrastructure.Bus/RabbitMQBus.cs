@@ -21,7 +21,7 @@ namespace Socca.Infrastructure.Bus
         private readonly List<Type> _eventTypes;
         private readonly IServiceScopeFactory _serviceScopeFactory;
 
-        private const string _hostName = "<SERVER_NAME>";
+        private const string _hostName = "localhost";
 
         public RabbitMQBus(IMediator mediator, IServiceScopeFactory serviceScopeFactory)
         {

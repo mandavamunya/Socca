@@ -19,37 +19,16 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 
 # In progress
 
-- Add centralized caching: Redis Cache
+- Update documentation
 
 # What's next
-- Update documentation
+
 - Add React frontend application
 - Add Kubernetes support and deploy to Azure AKS
 - Make use of Azure SQL Server
 - Add more unit tests
 - Add functional tests and integration tests
 
-
-<!--# Entity Relationship Diagram-->
-
-<!--<img src="https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png" alt="" title="Entity Relational Diagram" align="right" width="500" height="600" />-->
-
-
-<!--NOTE: Relationships still need to be updated.-->
-
-## Important RabbitMq Commands
-
-rabbitmqctl stop_app
-
-rabbitmqctl start_app
-
-rabbitmqctl reset
-
-rabbitmqctl add_user test test
-
-rabbitmqctl set_user_tags test administrator
-
-rabbitmqctl set_permissions -p / test ".*" ".*" ".*"
 
 # Redis Cache and Kubernetes
 
@@ -74,7 +53,7 @@ A distributed cache service was added to keep track of each application client's
 ### Entity Relationship Diagram (ERD) for the application states that will be saved in the distributed Redis cache.
 ![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
 
-As an example we are only going to save the state of the FootballClubStadium and PlayerTransfers entities i.e. LinkToStadiumCreatedEvent and PlayerTransferCreatedEvent respectively.
+As an example we are only going to save the state of the FootballClubStadium and PlayerTransfer entities i.e. LinkToStadiumCreatedEvent and PlayerTransferCreatedEvent respectively.
 In real life scenarios the Stadium, Player, FootballClub entities are actually look up data and do not get changed that often.
 ## Outstanding work
 
@@ -100,70 +79,7 @@ A property IsCurrent will also be added to each event and therefore another upda
     }
 ```
 
-
-# How to Run
-
-- Make sure you update the ConnectionString for each microservice to match your machine''s configuration.
-- Install rabbitmq on your machine or simple get a docker image and run it
-- You are good to go. This is a multiple startup project you can simple hit the run project button and all the projects will start. 
-
-NOTE: The steps will change once docker and kurbernetes are setup. There after no configuration will be needed before running the project.
-
 # Dockerizing
-
-## Important docker commands
-
-List all images:
-```powershell
-docker images
-```
-
-List all containers:
-```powershell
-docker ps
-```
-
-Delete every Docker containers:
-```powershell
-docker-compose down 
-```
-
-Remove all docker containers:
-
-```powershell
-docker rm -f $(docker ps -a -q)
-```
-
-Delete a docker container with CONTAINER ID 10e62ea29d83:
-
-```powershell
-docker rm –f 10e62ea29d83
-```
-
-Delete all docker images:
-```powershell
-docker rmi -f $(docker images -q)
-```
-
-Delete a docker image with IMAGE ID 870fda08c907:
-```powershell
-docker rmi –f 870fda08c907
-```
-
-Build your application:
-```powershell
-docker-compose build
-```
-
-```powershell
-Run your application: docker-compose up
-```
-
-You migh be prompted to create a network. Create a network by running the following command:
-
-```powershell
-docker network create soccanet
-```
 
 ## Rabbit Mq docker image for testing on my local MAC
 ```powershell
@@ -230,8 +146,82 @@ Migrations have already been created for you however to create migration (from t
 dotnet ef migrations add InitialMigration --context stadiumdbcontext -p ../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj -s Socca.Stadium.Api.csproj -o Migrations
 ```
 
+# How to Run
+
+- Make sure you update the ConnectionString for each microservice to match your machine''s configuration.
+- Install rabbitmq on your machine or simple get a docker image and run it
+- You are good to go. This is a multiple startup project you can simple hit the run project button and all the projects will start. 
+
+NOTE: The steps will change once docker and kurbernetes are setup. There after no configuration will be needed before running the project.
 
 
+## Important RabbitMq Commands
+
+rabbitmqctl stop_app
+
+rabbitmqctl start_app
+
+rabbitmqctl reset
+
+rabbitmqctl add_user test test
+
+rabbitmqctl set_user_tags test administrator
+
+rabbitmqctl set_permissions -p / test ".*" ".*" ".*"
+
+## Important docker commands
+
+List all images:
+```powershell
+docker images
+```
+
+List all containers:
+```powershell
+docker ps
+```
+
+Delete every Docker containers:
+```powershell
+docker-compose down 
+```
+
+Remove all docker containers:
+
+```powershell
+docker rm -f $(docker ps -a -q)
+```
+
+Delete a docker container with CONTAINER ID 10e62ea29d83:
+
+```powershell
+docker rm –f 10e62ea29d83
+```
+
+Delete all docker images:
+```powershell
+docker rmi -f $(docker images -q)
+```
+
+Delete a docker image with IMAGE ID 870fda08c907:
+```powershell
+docker rmi –f 870fda08c907
+```
+
+Build your application:
+```powershell
+docker-compose build
+```
+
+```powershell
+Run your application: docker-compose up
+```
+
+You migh be prompted to create a network. Create a network by running the following command:
+
+```powershell
+docker network create soccanet
+```
 
 # References
 1. Introducing CQRS, The Microsoft Press Store by Pearson [https://www.microsoftpressstore.com/articles/article.aspx?p=2248809&seqNum=3]
