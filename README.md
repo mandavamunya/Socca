@@ -52,13 +52,14 @@ Sticky persistence: in the case that the session state is saved in an in-memory 
 
 A distributed cache service was added to keep track of each application client's state. Only the current state of the client is saved in redis cache. 
 
+# In progress
+- Add centralized caching: Redis Cache
 
 # What's next
 - Update documenation
 - Add React frontend application
 - Add Kubernetes support and deploy to Azure AKS
 - Make use of Azure SQL Server
-- Add centralized caching: Redis Cache
 - Add more unit tests
 - Add functional tests and integration tests
 
