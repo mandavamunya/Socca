@@ -7,7 +7,7 @@
 Microservices architecture, event driven architecture, CQRS, event sourcing, clean architetcure, unit tests 
 
 
-# Assumption
+# Assumptions
 
 - The football clubs do not have a permanent home stadiums and can be reassigned to a new stadium before the beginning of each season.
 - Multiple events will be generated and possibly the event processors / consumers might take long to process hence why the use of an event bus.
@@ -22,7 +22,7 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 - Add centralized caching: Redis Cache
 
 # What's next
-- Update documenation
+- Update documentation
 - Add React frontend application
 - Add Kubernetes support and deploy to Azure AKS
 - Make use of Azure SQL Server
