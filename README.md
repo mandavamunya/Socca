@@ -52,7 +52,7 @@ Sticky persistence: in the case that the session state is saved in an in-memory 
 
 A distributed cache service was added to keep track of each application client's state. Only the current state of the client is saved in redis cache. 
 
-### Entity Relationship Diagram (ERD) for the application states that will be saved in the database.
+### Entity Relationship Diagram (ERD) for the application states that will be saved in the distributed Redis cache.
 ![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
 
 # In progress
