@@ -14,13 +14,15 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 
 ## Requirements
 
-- Events are generated when a football player is transfered between teams. 
-- Events are generated when linking a football team to a stadium.
+- An Event is generated when a football player is transfered between teams. 
+- An Event is generated when linking a football team to a stadium.
 
 # In progress
 
 - Update documentation
-
+- Distributed Caching with Redis Cache (95% complete)
+- Dockirize the application (90% complete)
+ 
 # What's next
 
 - Add React frontend application
