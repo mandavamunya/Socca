@@ -17,7 +17,7 @@ namespace Socca.DistributedCache.Application.EventHandlers
 
         public Task Handle(PlayerTransferCreatedEvent @event)
         {
-            _repository.Update(string.Format("player_{0}", @event.PlayerId.ToString()),
+            _repository.Update(string.Format("playerTransfer_{0}", @event.PlayerId.ToString()),
                 new PlayerTransfer()
             {
                 FromTeam = @event.From,

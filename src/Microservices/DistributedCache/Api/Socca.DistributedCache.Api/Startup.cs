@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Socca.DistributedCache.Application.EventHandlers;
 using Socca.DistributedCache.Application.Events;
+using Socca.DistributedCache.Application.Services;
 using Socca.DistributedCache.Data.Context;
 using Socca.DistributedCache.Domain.Interfaces;
 using Socca.Domain.Core.Bus;
@@ -64,6 +65,10 @@ namespace Socca.DistributedCache.Api
 
             // Data
             services.AddScoped(typeof(IDistributedCacheRepository<>), typeof(DistributedCacheRepository<>));
+
+            // Application Services
+            services.AddTransient<IPlayerTransferService, PlayerTransferService> ();
+            services.AddTransient<IFootballClubToStadiumService, FootballClubToStadiumService> ();
 
             // Infrastructure e.g. Bus
             DependencyContainer.RegisterServices(services);

@@ -7,6 +7,7 @@
   <ItemGroup>
     <Folder Include="Events\" />
     <Folder Include="EventHandlers\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Socca.DistributedCache.Data\Socca.DistributedCache.Data.csproj" />
