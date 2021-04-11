@@ -17,8 +17,8 @@ namespace Socca.DistributedCache.Application.EventHandlers
 
         public Task Handle(LinkToStadiumCreatedEvent @event)
         {
-            _repository.Update(@event.FootballClubId.ToString(),
-            new Domain.Entities.FootballClubStadium()
+            _repository.Update(string.Format("footballclub_{0}", @event.FootballClubId.ToString()),
+            new FootballClubStadium()
             {
                 FootballClubId = @event.FootballClubId,
                 StadiumId = @event.StadiumId

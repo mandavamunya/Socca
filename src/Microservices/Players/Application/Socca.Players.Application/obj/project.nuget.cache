@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lpngxqa0fYcyO7jdwF3G7v91FbcY/hsHEjHng2a22NoYlx63LNUk6GTQPzai42lnmSfcv1WSNuHVyLBa5eeHjA==",
+  "dgSpecHash": "L1ZMzwINzUGRB5ZtIgY6SyzAwkubeODOdRmS0jKUybsI1qVXZijo1nGJj0+V7zN/XfWNRNUIkRoRM8ituMkWng==",
   "success": true,
   "projectFilePath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/Players/Application/Socca.Players.Application/Socca.Players.Application.csproj",
   "expectedPackageFiles": [

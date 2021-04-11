@@ -8,29 +8,32 @@ namespace Socca.DistributedCache.Data.Context
 {
     public class DistributedCacheRepository<D>: IDistributedCacheRepository<D>
     {
-        private readonly IDistributedCache _redisCache;
+        private readonly IDistributedCache _cache;
 
-        public DistributedCacheRepository(IDistributedCache redisCache)
+        public DistributedCacheRepository(IDistributedCache cache)
         {
-            _redisCache = redisCache ?? throw new ArgumentNullException(nameof(redisCache));
+            _cache = cache ?? throw new ArgumentNullException(nameof(cache));
         }
 
         public async Task Delete(string key)
         {
-            await _redisCache.RemoveAsync(key);
+            await _cache.RemoveAsync(key);
         }
 
         public async Task<D> Get(string key)
         {
-            var cachedObject = await _redisCache.GetStringAsync(key);
-            if (string.IsNullOrEmpty(cachedObject))
-                return default;
-            return JsonConvert.DeserializeObject<D>(cachedObject);
+            var cachedObject = await _cache.GetStringAsync(key);
+            return (string.IsNullOrEmpty(cachedObject)) ? default: JsonConvert.DeserializeObject<D>(cachedObject);
         }
 
-        public async Task<D> Update(string key, D cacheObject)
+        public async Task<D> Update(string key, D value)
         {
-            await _redisCache.SetStringAsync(key, JsonConvert.SerializeObject(cacheObject));
+            var options = new DistributedCacheEntryOptions()
+            .SetAbsoluteExpiration(DateTimeOffset.Now.AddDays(1)) // indicates whether a cache entry should be evicted at a specified point in time.
+            .SetSlidingExpiration(TimeSpan.FromDays(0.5));
+
+            var cacheObject = JsonConvert.SerializeObject(value);
+            await _cache.SetStringAsync(key, cacheObject, options);
             return await Get(key);
         }
     }

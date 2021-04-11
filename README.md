@@ -82,8 +82,21 @@ A property IsCurrent will also be added to each event and therefore another upda
 # Dockerizing
 
 ## Rabbit Mq docker image for testing on my local MAC
+
 ```powershell
 docker pull rabbitmq
+```
+
+```powershell
+docker run --name rediscache -p 5090:6379 -d redis
+```
+
+```powershell
+docker start rediscache
+```
+
+```powershell
+docker exec -it rediscache redis-cli
 ```
 
 ## MSSQL DB docker image for testing on my local MAC

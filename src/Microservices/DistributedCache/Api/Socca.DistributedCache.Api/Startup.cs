@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,9 +34,14 @@ namespace Socca.DistributedCache.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Redis
             services.AddStackExchangeRedisCache(options => {
-                options.Configuration = Configuration.GetValue<string>("CacheSettings:Connection");
+                options.Configuration = Configuration.GetValue<string>("Redis:Connection");
             });
+
+            services.AddScoped<IDistributedCache, RedisCache>();
+
+            // Controllers
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -45,6 +52,8 @@ namespace Socca.DistributedCache.Api
 
         private void RegisterServices(IServiceCollection services)
         {
+
+
             // Subsciptions
             services.AddTransient<PlayerTransferEventHandler>();
             services.AddTransient<LinkToStadiumEventHandler>();
