@@ -238,6 +238,13 @@ You migh be prompted to create a network. Create a network by running the follow
 docker network create soccanet
 ```
 
+## important dotnet cli commands
+To use secretes run the following command in the project directory
+
+```powershell
+dotnet user-secrets init
+```
+
 # References
 1. Introducing CQRS, The Microsoft Press Store by Pearson [https://www.microsoftpressstore.com/articles/article.aspx?p=2248809&seqNum=3]
 2. [https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-deployment?view=sql-server-ver15&pivots=cs1-bash]

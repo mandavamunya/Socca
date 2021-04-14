@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "50b5gHdzYxKoJnxeYIZ2x/zq77N7S1rCGF/OPD+dCt8AaA/PM2DHNm+N7AMd1/FbPVzj+0mEedxpxRoKyxyT1A==",
+  "dgSpecHash": "9lueOIfPbpJ+ioIujtB+kiuoNAVrUR3w76k1S9zJifJz+8N+Zch2RWRX39nbKBLlD8U+QZuMdFfC1EqeU5uoHg==",
   "success": true,
   "projectFilePath": "/Users/munyaradzimandava/workspace/dotnet/Socca/src/Microservices/FootballClub/Api/Socca.FootballClub.Api/Socca.FootballClub.Api.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "/Users/munyaradzimandava/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.netcore.targets/1.1.3/microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/munyaradzimandava/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.10.8/microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "/Users/munyaradzimandava/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",

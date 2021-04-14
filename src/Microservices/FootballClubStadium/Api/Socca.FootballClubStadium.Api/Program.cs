@@ -49,12 +49,11 @@ namespace Socca.FootballClubStadium.Api
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.ConfigureKestrel(o =>
-                    {
-                        o.ConfigureHttpsDefaults(o =>
-                        o.ClientCertificateMode =
-                        Microsoft.AspNetCore.Server.Kestrel.Https.ClientCertificateMode.RequireCertificate);
-                    });
+                    //webBuilder.ConfigureKestrel(o =>
+                    //{
+                    //    o.ConfigureHttpsDefaults(o =>
+                    //    o.ClientCertificateMode = Microsoft.AspNetCore.Server.Kestrel.Https.ClientCertificateMode.RequireCertificate);
+                    //});
                 });
     }
 }

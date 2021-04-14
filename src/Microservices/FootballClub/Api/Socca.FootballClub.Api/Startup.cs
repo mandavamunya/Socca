@@ -49,14 +49,12 @@ namespace Socca.FootballClub.Api
 
             // Add memory cache services
             services.AddMemoryCache();
-            services.AddHsts(options =>
-            {
-                options.Preload = true;
-                options.IncludeSubDomains = true;
-                options.MaxAge = TimeSpan.FromDays(60);
-                //options.ExcludedHosts.Add("example.com");
-                //options.ExcludedHosts.Add("www.example.com");
-            });
+            //services.AddHsts(options =>
+            //{
+            //    options.Preload = true;
+            //    options.IncludeSubDomains = true;
+            //    options.MaxAge = TimeSpan.FromDays(60);
+            //});
             RegisterServices(services);
         }
 
@@ -88,13 +86,12 @@ namespace Socca.FootballClub.Api
             }
             else
             {
-                app.UseExceptionHandler("/Error");
                 app.UseHsts();
+                app.UseHttpsRedirection();
+
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Socca.FootballClub.Api v1"));
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

@@ -5,76 +5,96 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44301
-      - ASPNETCORE_Kestrel__Certificates__Default__Password=crypticpassword
+      #- ASPNETCORE_HTTPS_PORT=44301
+      #- ASPNETCORE_Kestrel__Certificates__Default__Password=crypticpassword
     ports:
       - "62245:80"
       - "44301:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    depends_on: 
+      - db
 
   socca.footballclubstadium.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44350
-      - ASPNETCORE_Kestrel__Certificates__Default__Password=crypticpassword
+      #- ASPNETCORE_HTTPS_PORT=44350
+      #- ASPNETCORE_Kestrel__Certificates__Default__Password=crypticpassword
     ports:
       - "63784:80"
       - "44350:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    depends_on: 
+      - db
 
   socca.players.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44328
-      - ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword"
+      #- ASPNETCORE_HTTPS_PORT=44328
+      #- ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword"
     ports:
       - "19578:80"
       - "44328:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    depends_on: 
+      - db
 
   socca.stadium.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44309
-      - ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword"
+      #- ASPNETCORE_HTTPS_PORT=44309
+      #- ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword"
     ports:
       - "3094:80"
       - "44309:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    depends_on: 
+      - db
 
   socca.playertransfers.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44370
-      - ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword"
+      #- ASPNETCORE_HTTPS_PORT=44370
+      #- ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword"
     ports:
       - "16956:80"
       - "44370:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    depends_on: 
+      - db
 
   socca.distributedcache.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44305
-      - ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword"
+      #- ASPNETCORE_HTTPS_PORT=44305
+      #- ASPNETCORE_Kestrel__Certificates__Default__Password="crypticpassword
     ports:
       - "14417:80"
       - "44305:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    depends_on: 
+      - db
+
+  db:
+      image: mcr.microsoft.com/mssql/server:2019-latest
+      environment:
+        - ACCEPT_EULA=Y
+        - SA_PASSWORD=Password2021
+      ports:
+        - "5434:1433"  

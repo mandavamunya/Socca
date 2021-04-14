@@ -47,14 +47,14 @@ namespace Socca.Stadium.Api
 
             // Add memory cache services
             services.AddMemoryCache();
-            services.AddHsts(options =>
-            {
-                options.Preload = true;
-                options.IncludeSubDomains = true;
-                options.MaxAge = TimeSpan.FromDays(60);
+            //services.AddHsts(options =>
+            //{
+            //    options.Preload = true;
+            //    options.IncludeSubDomains = true;
+            //    options.MaxAge = TimeSpan.FromDays(60);
                 //options.ExcludedHosts.Add("example.com");
                 //options.ExcludedHosts.Add("www.example.com");
-            });
+            //});
             RegisterServices(services);
         }
 
@@ -82,13 +82,12 @@ namespace Socca.Stadium.Api
             }
             else
             {
-                app.UseExceptionHandler("/Error");
                 app.UseHsts();
+                app.UseHttpsRedirection();
+
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Socca.Stadium.Api v1"));
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
