@@ -85,8 +85,13 @@ A property IsCurrent will also be added to each event and therefore another upda
 
 # Dockerizing
 
-### ![](https://github.com/mandavamunya/Socca/blob/main/image/dockerized_socca.png)
+### Dockerized microservices
 
+![](https://github.com/mandavamunya/Socca/blob/main/image/dockerized_socca.png)
+
+### Accessing dockerized APIs
+
+![](https://github.com/mandavamunya/Socca/blob/main/image/accessing_containerized_app.png)
 ### Rabbit Mq docker image for testing on my local MAC
 
 ```powershell
