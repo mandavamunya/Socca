@@ -1,3 +1,5 @@
+# N.B. DOCUMENTATION/README IS OUTDATED AND NEEDS TO BE UPDATED
+
 # Technology used
 
 .Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kurbernetes, Azure AKS, Azure SQL Server, Redis Cache, React
@@ -19,7 +21,7 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 
 # In progress
 
-- Update documentation
+- Update documentation (On going)
 - Distributed Caching with Redis Cache (95% complete)
 - Dockirize the application (90% complete)
  
@@ -83,7 +85,9 @@ A property IsCurrent will also be added to each event and therefore another upda
 
 # Dockerizing
 
-## Rabbit Mq docker image for testing on my local MAC
+### ![](https://github.com/mandavamunya/Socca/blob/main/image/dockerized_socca.png)
+
+### Rabbit Mq docker image for testing on my local MAC
 
 ```powershell
 docker pull rabbitmq
