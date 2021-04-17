@@ -6,62 +6,34 @@ services:
     build:
       context: .
       dockerfile: src/Microservices/FootballClub/Api/Socca.FootballClub.Api/Dockerfile
-#    depends_on: 
-#      - db
 
   socca.footballclubstadium.api:
     image: ${DOCKER_REGISTRY-}soccafootballclubstadium
     build:
       context: .
       dockerfile: src/Microservices/FootballClubStadium/Api/Socca.FootballClubStadium.Api/Dockerfile
-#    depends_on: 
-#      - db
 
   socca.players.api:
     image: ${DOCKER_REGISTRY-}soccaplayers
     build:
       context: .
       dockerfile: src/Microservices/Players/Api/Socca.Players.Api/Dockerfile
-#    depends_on: 
-#      - db
 
   socca.stadium.api:
     image: ${DOCKER_REGISTRY-}soccastadium
     build:
       context: .
       dockerfile: src/Microservices/Stadium/Api/Socca.Stadium.Api/Dockerfile
-#    depends_on: 
-#      - db
 
   socca.playertransfers.api:
     image: ${DOCKER_REGISTRY-}soccaplayertransfers
     build:
       context: .
       dockerfile: src/Microservices/PlayerTransfers/Api/Socca.PlayerTransfers.Api/Dockerfile
-#    depends_on: 
-#      - db
 
   socca.distributedcache.api:
     image: ${DOCKER_REGISTRY-}soccadistributedcache
     build:
       context: .
       dockerfile: src/Microservices/DistributedCache/Api/Socca.DistributedCache.Api/Dockerfile
-#    depends_on: 
-#      - db
 
-#  db:
-#      image: mcr.microsoft.com/mssql/server:2019-latest
-#      ports:
-#          - "5434:1433"
-#      environment:
-#          - ACCEPT_EULA=Y
-          #- MSSQL_PID=Express
-#          - SA_PASSWORD=Password2021
-#      expose:
-#          - "1433"
-
-
-#networks:
-#  default:
-#    external:
-#      name: socca_default

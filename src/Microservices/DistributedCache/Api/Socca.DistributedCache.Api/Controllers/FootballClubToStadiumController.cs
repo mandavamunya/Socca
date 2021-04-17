@@ -4,6 +4,8 @@ using Socca.DistributedCache.Domain.Interfaces;
 
 namespace Socca.DistributedCache.Api.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class FootballClubToStadiumController : ControllerBase
     {
         private readonly IFootballClubToStadiumService _service;
@@ -13,7 +15,7 @@ namespace Socca.DistributedCache.Api.Controllers
             _service = service;
         }
 
-        [HttpGet("/{key}")]
+        [HttpGet("{key}")]
         public async Task<IActionResult> Get([FromRoute] int key)
         {
             return Ok(await _service.Get(key));

@@ -40,14 +40,19 @@ namespace Socca.DistributedCache.Api
                 options.Configuration = Configuration.GetValue<string>("Redis:Connection");
             });
 
-            services.AddScoped<IDistributedCache, RedisCache>();
-
+            //services.AddScoped<IDistributedCache, RedisCache>();
+            services.Add(ServiceDescriptor.Singleton<IDistributedCache, RedisCache>());
+    
             // Controllers
             services.AddControllers();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Socca.DistributedCache.Api", Version = "v1" });
             });
+            // Add memory cache services
+            services.AddMemoryCache();
             RegisterServices(services);
         }
 

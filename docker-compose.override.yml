@@ -89,7 +89,7 @@ services:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     depends_on: 
-      - db
+      - redis_image
 
   db:
       image: mcr.microsoft.com/mssql/server:2019-latest
@@ -97,4 +97,10 @@ services:
         - ACCEPT_EULA=Y
         - SA_PASSWORD=Password2021
       ports:
-        - "5434:1433"  
+        - "5434:1433"
+
+  redis_image:
+    image: redis
+    container_name: cache
+    ports:
+      - "6379:6379"
