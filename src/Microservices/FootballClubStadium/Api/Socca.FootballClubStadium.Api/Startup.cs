@@ -51,6 +51,7 @@ namespace Socca.FootballClubStadium.Api
 
             // Add memory cache services
             services.AddMemoryCache();
+
             // services.AddHsts(options =>
             // {
             //    options.Preload = true;
@@ -58,6 +59,7 @@ namespace Socca.FootballClubStadium.Api
             //    options.MaxAge = TimeSpan.FromDays(60);
             // });
 
+            services.AddMediatR(typeof(Startup));
 
             RegisterServices(services);
         }

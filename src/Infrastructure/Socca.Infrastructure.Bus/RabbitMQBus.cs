@@ -21,7 +21,10 @@ namespace Socca.Infrastructure.Bus
         private readonly List<Type> _eventTypes;
         private readonly IServiceScopeFactory _serviceScopeFactory;
 
-        private const string _hostName = "localhost";
+        // Todo: move to settings file or .env file or any other safe option
+        private const string _hostName = "host.docker.internal";
+        private const string _userName = "user";
+        private const string _password = "password";
 
         public RabbitMQBus(IMediator mediator, IServiceScopeFactory serviceScopeFactory)
         {
@@ -38,7 +41,7 @@ namespace Socca.Infrastructure.Bus
 
         public void Publish<T>(T @event) where T : Event
         {
-            var factory = new ConnectionFactory() { HostName = _hostName };
+            var factory = new ConnectionFactory() { HostName = _hostName, UserName = _userName, Password = _password };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
@@ -84,6 +87,8 @@ namespace Socca.Infrastructure.Bus
         {
             var factory = new ConnectionFactory() {
                 HostName = _hostName,
+                UserName = _userName,
+                Password = _password,
                 DispatchConsumersAsync = true
             };
 

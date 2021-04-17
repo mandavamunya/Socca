@@ -1,4 +1,5 @@
 using System;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -47,14 +48,18 @@ namespace Socca.Stadium.Api
 
             // Add memory cache services
             services.AddMemoryCache();
+
             //services.AddHsts(options =>
             //{
             //    options.Preload = true;
             //    options.IncludeSubDomains = true;
             //    options.MaxAge = TimeSpan.FromDays(60);
-                //options.ExcludedHosts.Add("example.com");
-                //options.ExcludedHosts.Add("www.example.com");
+            //options.ExcludedHosts.Add("example.com");
+            //options.ExcludedHosts.Add("www.example.com");
             //});
+
+            services.AddMediatR(typeof(Startup));
+
             RegisterServices(services);
         }
 

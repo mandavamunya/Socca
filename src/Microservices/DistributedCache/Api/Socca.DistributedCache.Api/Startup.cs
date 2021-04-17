@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -53,6 +54,9 @@ namespace Socca.DistributedCache.Api
             });
             // Add memory cache services
             services.AddMemoryCache();
+
+            services.AddMediatR(typeof(Startup));
+
             RegisterServices(services);
         }
 

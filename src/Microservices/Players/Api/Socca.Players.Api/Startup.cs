@@ -50,14 +50,18 @@ namespace Socca.Players.Api
 
             // Add memory cache services
             services.AddMemoryCache();
+
             // services.AddHsts(options =>
             //{
             //    options.Preload = true;
             //    options.IncludeSubDomains = true;
             //    options.MaxAge = TimeSpan.FromDays(60);
-                //options.ExcludedHosts.Add("example.com");
-                //options.ExcludedHosts.Add("www.example.com");
+            //options.ExcludedHosts.Add("example.com");
+            //options.ExcludedHosts.Add("www.example.com");
             //});
+
+            services.AddMediatR(typeof(Startup));
+
             RegisterServices(services);
         }
 

@@ -15,6 +15,7 @@ services:
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     depends_on: 
       - db
+      - rabbitmq
 
   socca.footballclubstadium.api:
     environment:
@@ -30,6 +31,7 @@ services:
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     depends_on: 
       - db
+      - rabbitmq
 
   socca.players.api:
     environment:
@@ -45,6 +47,7 @@ services:
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     depends_on: 
       - db
+      - rabbitmq
 
   socca.stadium.api:
     environment:
@@ -60,6 +63,7 @@ services:
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     depends_on: 
       - db
+      - rabbitmq
 
   socca.playertransfers.api:
     environment:
@@ -75,6 +79,7 @@ services:
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     depends_on: 
       - db
+      - rabbitmq
 
   socca.distributedcache.api:
     environment:
@@ -90,6 +95,7 @@ services:
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     depends_on: 
       - redis_image
+      - rabbitmq
 
   db:
       image: mcr.microsoft.com/mssql/server:2019-latest
@@ -104,3 +110,16 @@ services:
     container_name: cache
     ports:
       - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+    environment:
+        - RABBITMQ_DEFAULT_USER=user
+        - RABBITMQ_DEFAULT_PASS=password
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq

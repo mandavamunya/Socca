@@ -5879,6 +5879,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "MediatR >= 9.0.0",
+      "MediatR.Extensions.Microsoft.DependencyInjection >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.4",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.8",
       "Socca.Infrastructure.IoC >= 1.0.0",
@@ -5930,6 +5932,14 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "MediatR": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "MediatR.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
