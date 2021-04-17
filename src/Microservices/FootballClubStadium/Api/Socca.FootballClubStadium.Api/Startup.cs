@@ -109,6 +109,15 @@ namespace Socca.FootballClubStadium.Api
             {
                 endpoints.MapControllers();
             });
+
+            ConfigureEventBus(app);
         }
+
+        private static void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<LinkToStadiumCreatedEvent, LinkToStadiumEventHandler>();
+        }
+
     }
 }

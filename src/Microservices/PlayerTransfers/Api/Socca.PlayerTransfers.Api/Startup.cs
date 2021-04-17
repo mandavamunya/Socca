@@ -114,6 +114,15 @@ namespace Socca.PlayerTransfers.Api
             {
                 endpoints.MapControllers();
             });
+
+            ConfigureEventBus(app);
         }
+
+        private static void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<PlayerTransferCreatedEvent, PlayerTransferEventHandler>();
+        }
+
     }
 }
