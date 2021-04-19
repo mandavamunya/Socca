@@ -24,14 +24,17 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 - Update documentation (On going)
 - Distributed Caching with Redis Cache (95% complete)
 - Dockerize the application (95% complete)
-- Add Kubernetes support and deploy to Azure AKS (just started)
+- Add Kubernetes support (just started)
 - Add React frontend application (just started)
 
 # What's next
 - Add a security microservice
+- Add centralized logging and health checks
 - Make use of Azure SQL Server
+- Deploy to Azure AKS
 - Add more unit tests
 - Add functional tests and integration tests
+
 
 # Redis Cache and Kubernetes
 
@@ -58,6 +61,7 @@ A distributed cache service was added to keep track of each application client's
 
 As an example we are only going to save the state of the FootballClubStadium and PlayerTransfer entities i.e. LinkToStadiumCreatedEvent and PlayerTransferCreatedEvent respectively.
 In real life scenarios the Stadium, Player, FootballClub entities are actually look up data and do not get changed that often.
+
 ## Outstanding work
 
 The entities FootballClubStadium and PlayerTransfer are actually event logs or history data and are not meant to be deleted. Each event must have a date occured or CreatedDate property. 
@@ -86,29 +90,17 @@ A property IsCurrent will also be added to each event and therefore another upda
 
 ### Accessing your microservices in the browser
 
-FootballClub:
+FootballClub: https://localhost:44301/swagger/index.html
 
-https://localhost:44301/swagger/index.html
+Players: https://localhost:44328/swagger/index.html
 
-Players:
+FootballClubStadium: https://localhost:44350/swagger/index.html
 
-https://localhost:44328/swagger/index.html
+PlayerTransfers: https://localhost:44370/swagger/index.html
 
-FootballClubStadium:
+Stadium: https://localhost:44309/swagger/index.html
 
-https://localhost:44350/swagger/index.html
-
-PlayerTransfers:
-
-https://localhost:44370/swagger/index.html
-
-Stadium:
-
-https://localhost:44309/swagger/index.html
-
-Distributed Cache:
-
-https://localhost:44305/swagger/index.html
+Distributed Cache: https://localhost:44305/swagger/index.html
 
 ### Dockerized microservices
 
@@ -118,46 +110,6 @@ https://localhost:44305/swagger/index.html
 
 ![](https://github.com/mandavamunya/Socca/blob/main/image/accessing_containerized_app.png)
 
-### Rabbit Mq docker image for testing on my local MAC
-
-```powershell
-docker pull rabbitmq
-```
-
-```powershell
-docker run --name rediscache -p 5090:6379 -d redis
-```
-
-```powershell
-docker start rediscache
-```
-
-```powershell
-docker exec -it rediscache redis-cli
-```
-
-## MSSQL DB docker image for testing on my local MAC
-
-Pull MSSQL docker image:
-```powershell
-sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
-```
-Run MSSQL docker image:
-```powershell
-sudo docker run -d --name Mssqldb -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password2021' -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest
-```
-
-<!--
-Execute MSSQL docker image:
-```powershell
-sudo docker exec -it Mssqldb "bash"/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Password2021"
-```
-
-Run a quick test:
-```powershell
-SELECT @@versionGO
-```
--->
 
 # Create database migrations for each microservice
 
@@ -197,13 +149,12 @@ dotnet ef migrations add InitialMigration --context stadiumdbcontext -p ../../Da
 ```
 
 
-
-
 # How to Run
 
-- Make sure you update the ConnectionString for each microservice to match your machine''s configuration.
-- Install rabbitmq on your machine or simple get a docker image and run it
-- You are good to go. This is a multiple startup project you can simple hit the run project button and all the projects will start. 
+- Simple click the run button in Visual Studio 2019. Please see button encircled in an orange oval in the image below.
+
+![](https://github.com/mandavamunya/Socca/blob/main/image/run_docker_containers.png)
+
 
 NOTE: The steps will change once docker and kurbernetes are setup. There after no configuration will be needed before running the project.
 
@@ -282,6 +233,50 @@ To use secretes run the following command in the project directory
 ```powershell
 dotnet user-secrets init
 ```
+
+# Optional (setting up development environment)
+
+### Rabbit Mq docker image for testing on my local MAC
+
+```powershell
+docker pull rabbitmq
+```
+
+```powershell
+docker run --name rediscache -p 5090:6379 -d redis
+```
+
+```powershell
+docker start rediscache
+```
+
+```powershell
+docker exec -it rediscache redis-cli
+```
+
+## MSSQL DB docker image for testing on my local MAC
+
+Pull MSSQL docker image:
+```powershell
+sudo docker pull mcr.microsoft.com/mssql/server:2019-latest
+```
+Run MSSQL docker image:
+```powershell
+sudo docker run -d --name Mssqldb -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password2021' -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest
+```
+
+<!--
+Execute MSSQL docker image:
+```powershell
+sudo docker exec -it Mssqldb "bash"/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Password2021"
+```
+
+Run a quick test:
+```powershell
+SELECT @@versionGO
+```
+-->
+
 
 # References
 1. Introducing CQRS, The Microsoft Press Store by Pearson [https://www.microsoftpressstore.com/articles/article.aspx?p=2248809&seqNum=3]
