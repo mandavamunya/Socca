@@ -88,7 +88,21 @@ A property IsCurrent will also be added to each event and therefore another upda
 
 # Dockerizing
 
-### Accessing your microservices in the browser
+### How to Run
+
+- Simply click the run button in Visual Studio 2019. Please see button encircled in an orange oval in the image below.
+
+![](https://github.com/mandavamunya/Socca/blob/main/image/run_docker_containers.png)
+
+### Dockerized microservices
+
+![](https://github.com/mandavamunya/Socca/blob/main/image/dockerized_socca.png)
+
+### Accessing dockerized APIs
+
+![](https://github.com/mandavamunya/Socca/blob/main/image/accessing_containerized_app.png)
+
+### Accessing all your microservices in the browser
 
 FootballClub: https://localhost:44301/swagger/index.html
 
@@ -102,13 +116,6 @@ Stadium: https://localhost:44309/swagger/index.html
 
 Distributed Cache: https://localhost:44305/swagger/index.html
 
-### Dockerized microservices
-
-![](https://github.com/mandavamunya/Socca/blob/main/image/dockerized_socca.png)
-
-### Accessing dockerized APIs
-
-![](https://github.com/mandavamunya/Socca/blob/main/image/accessing_containerized_app.png)
 
 
 # Create database migrations for each microservice
@@ -148,15 +155,6 @@ Migrations have already been created for you however to create migration (from t
 dotnet ef migrations add InitialMigration --context stadiumdbcontext -p ../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj -s Socca.Stadium.Api.csproj -o Migrations
 ```
 
-
-# How to Run
-
-- Simple click the run button in Visual Studio 2019. Please see button encircled in an orange oval in the image below.
-
-![](https://github.com/mandavamunya/Socca/blob/main/image/run_docker_containers.png)
-
-
-NOTE: The steps will change once docker and kurbernetes are setup. There after no configuration will be needed before running the project.
 
 
 ## Important RabbitMq Commands
