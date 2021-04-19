@@ -23,16 +23,15 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 
 - Update documentation (On going)
 - Distributed Caching with Redis Cache (95% complete)
-- Dockirize the application (90% complete)
- 
-# What's next
+- Dockerize the application (95% complete)
+- Add Kubernetes support and deploy to Azure AKS (just started)
+- Add React frontend application (just started)
 
-- Add React frontend application
-- Add Kubernetes support and deploy to Azure AKS
+# What's next
+- Add a security microservice
 - Make use of Azure SQL Server
 - Add more unit tests
 - Add functional tests and integration tests
-
 
 # Redis Cache and Kubernetes
 
@@ -85,6 +84,32 @@ A property IsCurrent will also be added to each event and therefore another upda
 
 # Dockerizing
 
+### Accessing your microservices in the browser
+
+FootballClub:
+
+https://localhost:44301/swagger/index.html
+
+Players:
+
+https://localhost:44328/swagger/index.html
+
+FootballClubStadium:
+
+https://localhost:44350/swagger/index.html
+
+PlayerTransfers:
+
+https://localhost:44370/swagger/index.html
+
+Stadium:
+
+https://localhost:44309/swagger/index.html
+
+Distributed Cache:
+
+https://localhost:44305/swagger/index.html
+
 ### Dockerized microservices
 
 ![](https://github.com/mandavamunya/Socca/blob/main/image/dockerized_socca.png)
@@ -92,6 +117,7 @@ A property IsCurrent will also be added to each event and therefore another upda
 ### Accessing dockerized APIs
 
 ![](https://github.com/mandavamunya/Socca/blob/main/image/accessing_containerized_app.png)
+
 ### Rabbit Mq docker image for testing on my local MAC
 
 ```powershell
@@ -169,6 +195,9 @@ Migrations have already been created for you however to create migration (from t
 ```powershell
 dotnet ef migrations add InitialMigration --context stadiumdbcontext -p ../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj -s Socca.Stadium.Api.csproj -o Migrations
 ```
+
+
+
 
 # How to Run
 
