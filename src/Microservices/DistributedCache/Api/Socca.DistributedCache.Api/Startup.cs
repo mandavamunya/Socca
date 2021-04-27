@@ -108,6 +108,7 @@ namespace Socca.DistributedCache.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health");
             });
 
             ConfigureEventBus(app);

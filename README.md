@@ -56,11 +56,12 @@ Sticky persistence: in the case that the session state is saved in an in-memory 
 
 A distributed cache service was added to keep track of each application client's state. Only the current state of the client is saved in redis cache. 
 
-### Entity Relationship Diagram (ERD) for the application states that will be saved in the distributed Redis cache.
+<!--### Entity Relationship Diagram (ERD) for the application states that will be saved in the distributed Redis cache.
 ![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
 
 As an example we are only going to save the state of the FootballClubStadium and PlayerTransfer entities i.e. LinkToStadiumCreatedEvent and PlayerTransferCreatedEvent respectively.
 In real life scenarios the Stadium, Player, FootballClub entities are actually look up data and do not get changed that often.
+-->
 
 ## Outstanding work
 
@@ -87,6 +88,8 @@ A property IsCurrent will also be added to each event and therefore another upda
 ```
 
 # Dockerizing
+
+docker tag soccafootballclubstadium mandavadev/soccafootballclubstadium:1.0.0
 
 ### How to Run
 

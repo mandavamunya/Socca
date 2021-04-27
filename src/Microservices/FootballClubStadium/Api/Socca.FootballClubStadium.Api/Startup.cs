@@ -52,13 +52,6 @@ namespace Socca.FootballClubStadium.Api
             // Add memory cache services
             services.AddMemoryCache();
 
-            // services.AddHsts(options =>
-            // {
-            //    options.Preload = true;
-            //    options.IncludeSubDomains = true;
-            //    options.MaxAge = TimeSpan.FromDays(60);
-            // });
-
             services.AddMediatR(typeof(Startup));
 
             RegisterServices(services);
@@ -108,6 +101,7 @@ namespace Socca.FootballClubStadium.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health");
             });
 
             ConfigureEventBus(app);
