@@ -1,17 +1,28 @@
-import './App.css';
+import React from 'react';
 import {  BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+
 import Home from './pages/Home';
 import Players from './pages/Players';
 import Stadiums from './pages/Stadiums';
 import Teams from './pages/Teams';
 
-import NavBar from './components/NavBar';
+import DrawerNav from './components/DrawerNav';
+
+
+import './App.css';
+import logo from './assets/images/logo.svg';
 
 function App() {
+  const classes = useStyles();
+
   return (
     <Router>
-      <div>
-        <NavBar />
+      <div className={classes.root}>
+        <CssBaseline />
+        <DrawerNav />
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -35,3 +46,12 @@ function App() {
 }
 
 export default App;
+
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      display: 'flex',
+    }
+  }),
+);

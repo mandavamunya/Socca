@@ -2,7 +2,7 @@
 
 # Technology used
 
-.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kurbernetes, Azure AKS, Azure SQL Server, Redis Cache, React
+.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kurbernetes, Azure AKS, Azure SQL Server, Redis Cache, React, Material UI
 
 # Topics cover
 
