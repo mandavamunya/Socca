@@ -14,6 +14,8 @@ import DrawerNav from './components/DrawerNav';
 
 import './App.css';
 import logo from './assets/images/logo.svg';
+import { DrawerContextProvider } from './context/DrawerContext';
+
 
 function App() {
   const classes = useStyles();
@@ -21,25 +23,27 @@ function App() {
   return (
     <Router>
       <div className={classes.root}>
-        <CssBaseline />
-        <DrawerNav />
+        <DrawerContextProvider>
+          <CssBaseline />
+          <DrawerNav />
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/players">
-            <Players />
-          </Route>
-          <Route path="/stadiums">
-            <Stadiums />
-          </Route>
-          <Route path="/teams">
-            <Teams />
-          </Route>          
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/players">
+              <Players />
+            </Route>
+            <Route path="/stadiums">
+              <Stadiums />
+            </Route>
+            <Route path="/teams">
+              <Teams />
+            </Route>          
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </DrawerContextProvider>
       </div>
     </Router>
   );

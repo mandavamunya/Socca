@@ -24,8 +24,9 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 - Update documentation (On going)
 - Distributed Caching with Redis Cache (95% complete)
 - Dockerize the application (95% complete)
+- Add React frontend application (30%)
 - Add Kubernetes support (just started)
-- Add React frontend application (just started)
+
 
 # What's next
 - Add a security microservice

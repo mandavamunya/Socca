@@ -1,34 +1,33 @@
-import { createStyles, makeStyles, Theme, useTheme } from "@material-ui/core/styles";
 import React from "react";
 import clsx from 'clsx';
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import { useDrawerContext } from "../context/DrawerContext";
 
 const drawerWidth = 240;
 
 export default function Stadiums() {
+  const { drawerOpen } = useDrawerContext();
+  const classes = useStyles();
+      
+  return (
+      <main
+      className={clsx(classes.content, {
+          [classes.contentShift]: drawerOpen,
+      })}
+      >
+        <div className={classes.drawerHeader} />
 
-    const classes = useStyles();
-    const theme = useTheme();
-    const [open, setOpen] = React.useState(true);
+        <Typography variant="h4">
+            Stadiums
+        </Typography>       
+
+        <Typography paragraph>
         
-    return (
-        <main
-        className={clsx(classes.content, {
-            [classes.contentShift]: open,
-        })}
-        >
-            <div className={classes.drawerHeader} />
+        </Typography>
 
-            <Typography variant="h4">
-                Stadiums
-            </Typography>       
-
-            <Typography paragraph>
-            
-            </Typography>
-
-        </main>
-    );
+      </main>
+  );
 }
 
 const useStyles = makeStyles((theme: Theme) =>

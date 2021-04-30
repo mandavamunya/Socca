@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
@@ -15,9 +14,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 
-import MailIcon from '@material-ui/icons/Mail';
 import HomeIcon from '@material-ui/icons/Home';
 import GroupIcon from '@material-ui/icons/Group';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
@@ -27,31 +24,27 @@ import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import LockIcon from '@material-ui/icons/Lock';
 
-
+import { useDrawerContext } from "../context/DrawerContext";
 
 const drawerWidth = 240;
 
 export default function DrawerNav() {
+  
+  const { drawerOpen, handleDrawerOpen, handleDrawerClose } = useDrawerContext();
+
+
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-  const mainMenuIcons = [<HomeIcon />, <GroupIcon/>, <PersonPinIcon />, <SportsSoccerIcon />];
-  const securityMenuIcons = [<PersonAddIcon/>, <LockOpenIcon/>, <LockIcon/>];
+  const mainMenuIcons = [<HomeIcon/>, <GroupIcon/>, <PersonPinIcon/>, <SportsSoccerIcon/>];
+  const securityMenuIcons = [<PersonAddIcon/>, <LockOpenIcon/>, <LockIcon/>];  
 
   return (
     <div>
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
+          [classes.appBarShift]: drawerOpen,
         })}
       >
         <Toolbar>
@@ -60,7 +53,7 @@ export default function DrawerNav() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
+            className={clsx(classes.menuButton, drawerOpen && classes.hide)}
           >
             <MenuIcon />
           </IconButton>
@@ -73,7 +66,7 @@ export default function DrawerNav() {
         className={classes.drawer}
         variant="persistent"
         anchor="left"
-        open={open}
+        open={drawerOpen}
         classes={{
           paper: classes.drawerPaper,
         }}
@@ -85,8 +78,7 @@ export default function DrawerNav() {
         </div>
         <Divider />
         <List>
-          {['Home', 'Players', 'Stadiums', 'Teams'].map((text, index) => (
-              
+          {['Home', 'Players', 'Stadiums', 'Teams'].map((text, index) => (            
             <Link to={`${'/'.concat(text.toLowerCase())}`} key={text}>
                 <ListItem button>
                     <ListItemIcon> {mainMenuIcons[index]} </ListItemIcon>
