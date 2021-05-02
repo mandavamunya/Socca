@@ -14,7 +14,7 @@ export interface Props {
   description: string
 }
 
-export default function ImgMediaCard(props: Props) {
+export default function TeamCard(props: Props) {
   const classes = useStyles();
 
   return (
@@ -41,7 +41,7 @@ export default function ImgMediaCard(props: Props) {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          Assign To Stadium
         </Button>
         <Button size="small" color="primary">
           Learn More
