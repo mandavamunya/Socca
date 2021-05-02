@@ -15,21 +15,21 @@ export default function Teams() {
   const teams =  [
     { 
       description: "Chelsea Football Club is an English professional football club. Founded in 1905, the club competes in the Premier League, the top division of English football.", 
-      title: "Chelsea FC", 
+      title: "Chelsea Football Club", 
       image: "https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg" 
     },
     { 
       description: "Manchester United Football Club is a professional football club. Founded in 1878, the club competes in the Premier League, the top flight of English football.", 
-      title: "Manchester United FC", 
+      title: "Manchester United Football Club", 
       image: "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg" 
     },
     { 
       description: "Manchester City Football Club is an English football club. Founded in 1880, the club competes in the Premier League, the top flight of English football.", 
-      title: "Manchester City FC", 
+      title: "Manchester City Football Club", 
       image: "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" },
     { 
       description: "Liverpool Football Club is a professional football club. Founded in 1892, the club competes in the Premier League, the top tier of English football.", 
-      title: "Liverpool FC", 
+      title: "Liverpool Football Club", 
       image: "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" 
     },
   ];

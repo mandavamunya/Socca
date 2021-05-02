@@ -23,14 +23,14 @@ export default function TeamCard(props: Props) {
         <CardMedia
           component="img"
           alt={props.title}
-          height="240"
-          image={props.image}
-          //src={props.image}
+          height="140"
+          //image={props.image}
+          src={props.image}
           title={props.title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {props.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
            {
