@@ -1,6 +1,5 @@
-import React from "react";
 import clsx from 'clsx';
-import { createStyles, makeStyles, Theme, useTheme } from "@material-ui/core/styles";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { useDrawerContext } from "../context/DrawerContext";
 

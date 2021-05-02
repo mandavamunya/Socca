@@ -22,7 +22,6 @@ export function useDrawerContext() {
   return useContext(DrawerContext);
 }
 
-
 export function DrawerContextProvider({ children }: Props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 

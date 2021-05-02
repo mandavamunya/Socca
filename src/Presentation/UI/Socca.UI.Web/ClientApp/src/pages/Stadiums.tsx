@@ -1,4 +1,3 @@
-import React from "react";
 import clsx from 'clsx';
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -11,22 +10,22 @@ export default function Stadiums() {
   const classes = useStyles();
       
   return (
-      <main
-      className={clsx(classes.content, {
-          [classes.contentShift]: drawerOpen,
-      })}
-      >
-        <div className={classes.drawerHeader} />
+    <main
+    className={clsx(classes.content, {
+        [classes.contentShift]: drawerOpen,
+    })}
+    >
+      <div className={classes.drawerHeader} />
 
-        <Typography variant="h4">
-            Stadiums
-        </Typography>       
+      <Typography variant="h4">
+          Stadiums
+      </Typography>       
 
-        <Typography paragraph>
-        
-        </Typography>
+      <Typography paragraph>
+      
+      </Typography>
 
-      </main>
+    </main>
   );
 }
 
