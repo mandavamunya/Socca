@@ -47,17 +47,17 @@ export default function Teams() {
       </Typography>
 
       <div className={classes.gridRoot}>
-      <Grid container spacing={3}>
-      {
-        teams.map((team, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
-            <Paper className={classes.paper}>
-              <TeamCard title={team.title} description = {team.description} image = {team.image}/>
-            </Paper>
-          </Grid>
-        ))
-      }   
-      </Grid> 
+        <Grid container spacing={3}>
+        {
+          teams.map((team, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index}>
+              <Paper className={classes.paper}>
+                <TeamCard title={team.title} description = {team.description} image = {team.image}/>
+              </Paper>
+            </Grid>
+          ))
+        }   
+        </Grid> 
       </div>
         
     </main>
