@@ -36,8 +36,14 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 - Add more unit tests
 - Add functional tests and integration tests
 
-# Frontend / Client App
+# Frontend
+
+## Teams
 ![](https://github.com/mandavamunya/Socca/blob/main/image/react_client_teams.png)
+
+## Players
+
+![](https://github.com/mandavamunya/Socca/blob/main/image/react_client_players.png)
 
 # Redis Cache and Kubernetes
 
