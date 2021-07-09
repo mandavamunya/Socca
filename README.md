@@ -48,10 +48,12 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 # Redis Cache and Kubernetes
 
 ## Define Redis Cache
-?
+Redis is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability[4].
+Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indices[4].
 
 ## Define Kubernetes
-?
+Kubernetes is an open-source container-orchestration system for automating computer application deployment, scaling, and management[5].
+It was originally designed by Google and is now maintained by the Cloud Native Computing Foundation[5].
 
 ## Considerations should be made when load balancing a web app
 The way states are managed in a web application (session persistence) has an impact  on the load balancing configuration and scalability.
@@ -231,7 +233,7 @@ docker-compose build
 Run your application: docker-compose up
 ```
 
-You migh be prompted to create a network. Create a network by running the following command:
+You might be prompted to create a network. Create a network by running the following command:
 
 ```powershell
 docker network create soccanet
@@ -292,3 +294,5 @@ SELECT @@versionGO
 1. Introducing CQRS, The Microsoft Press Store by Pearson [https://www.microsoftpressstore.com/articles/article.aspx?p=2248809&seqNum=3]
 2. [https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-deployment?view=sql-server-ver15&pivots=cs1-bash]
 3. [https://www.nginx.com/resources/glossary/load-balancing/]
+4. [https://en.wikipedia.org/wiki/Redis]
+5. [https://en.wikipedia.org/wiki/Kubernetes]

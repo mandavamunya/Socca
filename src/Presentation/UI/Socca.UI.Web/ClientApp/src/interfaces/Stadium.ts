@@ -1,4 +1,4 @@
-export interface FootballClub
+export interface Stadium
 {
     id: number;
     name: string;
