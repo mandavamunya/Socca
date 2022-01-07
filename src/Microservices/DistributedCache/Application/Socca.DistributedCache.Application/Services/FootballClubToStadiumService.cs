@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Socca.DistributedCache.Domain.Constants;
 using Socca.DistributedCache.Domain.Entities;
 using Socca.DistributedCache.Domain.Interfaces;
 
@@ -14,7 +15,7 @@ namespace Socca.DistributedCache.Application.Services
 
         public async Task<FootballClubStadium> Get(int key)
         {
-            return await _repository.Get(string.Format("footballclubTOstadium_{0}", key));
+            return await _repository.Get($"{ServiceNameConstant.FootballClubStadium}-{key}");
         }
     }
 }

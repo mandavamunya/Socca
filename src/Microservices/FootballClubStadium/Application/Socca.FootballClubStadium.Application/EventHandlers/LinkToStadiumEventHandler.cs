@@ -19,7 +19,8 @@ namespace Socca.FootballClubStadium.Application.EventHandlers
             _repository.Add(new Domain.Entities.FootballClubStadium()
             {
                 FootballClubId = @event.FootballClubId,
-                StadiumId = @event.StadiumId
+                StadiumId = @event.StadiumId,
+                DateCreated = @event.Timestamp
             });
 
             return Task.CompletedTask;

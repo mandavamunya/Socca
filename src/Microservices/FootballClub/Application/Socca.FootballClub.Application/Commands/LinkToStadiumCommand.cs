@@ -1,6 +1,6 @@
 ﻿using Socca.Domain.Core.Commands;
 
-namespace Socca.FootballClub.Domain.Commands
+namespace Socca.FootballClub.Application.Commands
 {
     public abstract class LinkToStadiumCommand: Command
     {

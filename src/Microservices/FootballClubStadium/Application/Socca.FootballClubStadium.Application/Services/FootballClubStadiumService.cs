@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Socca.FootballClubStadium.Application.Interfaces;
 using Socca.FootballClubStadium.Domain.Interfaces;

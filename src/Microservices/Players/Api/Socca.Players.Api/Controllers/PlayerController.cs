@@ -17,16 +17,14 @@ namespace Socca.Players.Api.Controllers
             _playerService = playerService;
         }
 
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Player>>> Get()
         {
             return Ok(await _playerService.GetPlayers());
         }
 
-
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<Player>>> Post([FromBody] Player player)
+        public async Task<ActionResult> Post([FromBody] Player player)
         {
             await _playerService.AddPlayer(player);
             return Ok();

@@ -12,8 +12,8 @@ using Socca.FootballClub.Application.Interfaces;
 using Socca.FootballClub.Application.Services;
 using Socca.FootballClub.Data.Context;
 using Socca.FootballClub.Data.Repository;
-using Socca.FootballClub.Domain.CommandHandlers;
-using Socca.FootballClub.Domain.Commands;
+using Socca.FootballClub.Application.CommandHandlers;
+using Socca.FootballClub.Application.Commands;
 using Socca.FootballClub.Domain.Interfaces;
 using Socca.Infrastructure.IoC;
 
@@ -97,7 +97,7 @@ namespace Socca.FootballClub.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHealthChecks("/health");
+                //endpoints.MapHealthChecks("/health");
             });
         }
     }

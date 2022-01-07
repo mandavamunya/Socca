@@ -22,5 +22,11 @@ namespace Socca.PlayerTransfers.Api.Controllers
         {
             return Ok(await _playerTransferService.GetPlayerTransfers());
         }
+
+        //[HttpGet("{key}")]
+        //public async Task<ActionResult<IEnumerable<PlayerTransfer>>> Get([FromRoute]int key)
+        // {
+        //    return Ok(await _playerTransferService.GetPlayerTransfers(key));
+        // }
     }
 }

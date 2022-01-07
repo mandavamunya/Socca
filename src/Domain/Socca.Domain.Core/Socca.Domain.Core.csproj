@@ -8,9 +8,13 @@
     <Folder Include="Commands\" />
     <Folder Include="Events\" />
     <Folder Include="Bus\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Entities\" />
   </ItemGroup>
 </Project>

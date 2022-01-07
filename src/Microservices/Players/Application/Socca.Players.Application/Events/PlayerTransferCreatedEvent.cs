@@ -8,6 +8,7 @@ namespace Socca.Players.Application.Events
         public int To { get; private set; }
         public int PlayerId { get; private set; }
 
+
         public PlayerTransferCreatedEvent(int from, int to, int playerId)
         {
             From = from;

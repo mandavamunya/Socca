@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Socca.DistributedCache.Application.Events;
+using Socca.DistributedCache.Domain.Constants;
 using Socca.DistributedCache.Domain.Entities;
 using Socca.DistributedCache.Domain.Interfaces;
 using Socca.Domain.Core.Bus;
@@ -17,12 +18,13 @@ namespace Socca.DistributedCache.Application.EventHandlers
 
         public Task Handle(PlayerTransferCreatedEvent @event)
         {
-            _repository.Update(string.Format("playerTransfer_{0}", @event.PlayerId.ToString()),
-                new PlayerTransfer()
+            _repository.Update($"{ServiceNameConstant.PlayerTransfer}-{@event.PlayerId.ToString()}",
+            new PlayerTransfer()
             {
                 FromTeam = @event.From,
                 ToTeam = @event.To,
                 PlayerId = @event.PlayerId,
+                Timestamp = @event.Timestamp
             });
 
             return Task.CompletedTask;

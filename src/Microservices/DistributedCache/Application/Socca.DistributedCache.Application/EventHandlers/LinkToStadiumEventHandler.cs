@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Socca.DistributedCache.Application.Events;
+using Socca.DistributedCache.Domain.Constants;
 using Socca.DistributedCache.Domain.Entities;
 using Socca.DistributedCache.Domain.Interfaces;
 using Socca.Domain.Core.Bus;
@@ -17,11 +18,13 @@ namespace Socca.DistributedCache.Application.EventHandlers
 
         public Task Handle(LinkToStadiumCreatedEvent @event)
         {
-            _repository.Update(string.Format("footballclubTOstadium_{0}", @event.FootballClubId.ToString()),
+            _repository.Update(
+            $"{ServiceNameConstant.FootballClubStadium}-{@event.FootballClubId.ToString()}",
             new FootballClubStadium()
             {
                 FootballClubId = @event.FootballClubId,
-                StadiumId = @event.StadiumId
+                StadiumId = @event.StadiumId,
+                Timestamp = @event.Timestamp
             });
 
             return Task.CompletedTask;

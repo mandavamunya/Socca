@@ -32,25 +32,29 @@ namespace Socca.Players.Data.Context
                     {
                         FirstName = "Hakim",
                         LastName = "Ziyech",
-                        Position = "Midfielder"
+                        Position = "Midfielder",
+                        Image = "https://upload.wikimedia.org/wikipedia/commons/d/dd/Hakim_Ziyech_2020.jpg" 
                     },
                     new Domain.Entities.Player() 
                     {
                         FirstName = "Paul",
                         LastName = "Pogba",
-                        Position = "Midfielder"
+                        Position = "Midfielder",
+                        Image = "https://upload.wikimedia.org/wikipedia/commons/c/cc/FRA-ARG_%2811%29_-_Paul_Pogba_%28cropped_2%29.jpg"
                     },
                     new Domain.Entities.Player()
                     {
                         FirstName = "Edinson",
                         LastName = "Cavani",
-                        Position = "Forward"
+                        Position = "Forward",
+                        Image = "https://upload.wikimedia.org/wikipedia/commons/8/88/Edinson_Cavani_2018.jpg"
                     },
                     new Domain.Entities.Player()
                     {
                         FirstName = "Timo",
                         LastName = "Werner",
-                        Position = "Forward"
+                        Position = "Forward",
+                        Image = "https://upload.wikimedia.org/wikipedia/commons/c/c0/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Timo_Werner_850_0621.jpg"
                     }
                 };
             }

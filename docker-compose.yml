@@ -37,3 +37,15 @@ services:
       context: .
       dockerfile: src/Microservices/DistributedCache/Api/Socca.DistributedCache.Api/Dockerfile
 
+
+  socca.ui.web:
+    image: ${DOCKER_REGISTRY-}soccaui
+    build:
+      context: .
+      dockerfile: src/Presentation/UI/Socca.UI.Web/Dockerfile
+
+#  clientapp:
+#      image: clientapp
+#      build: 
+#        context: .
+#        dockerfile: src/Presentation/UI/Socca.UI.Web/ClientApp/Dockerfile

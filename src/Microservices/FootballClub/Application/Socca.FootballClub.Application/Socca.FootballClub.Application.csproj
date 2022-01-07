@@ -11,5 +11,13 @@
     <Folder Include="Services\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Models\" />
+    <Folder Include="Events\" />
+    <Folder Include="CommandHandlers\" />
+    <Folder Include="Commands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Events\" />
+    <None Remove="CommandHandlers\" />
+    <None Remove="Commands\" />
   </ItemGroup>
 </Project>

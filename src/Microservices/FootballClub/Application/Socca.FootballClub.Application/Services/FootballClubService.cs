@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Socca.Domain.Core.Bus;
 using Socca.FootballClub.Application.Interfaces;
 using Socca.FootballClub.Application.Models;
-using Socca.FootballClub.Domain.Commands;
+using Socca.FootballClub.Application.Commands;
 using Socca.FootballClub.Domain.Interfaces;
 
 namespace Socca.FootballClub.Application.Services
@@ -20,7 +20,6 @@ namespace Socca.FootballClub.Application.Services
 
         public async Task AddFootballClub(Domain.Entities.FootballClub footballClub)
         {
-            ///
             await _repository.Add(footballClub);
         }
 

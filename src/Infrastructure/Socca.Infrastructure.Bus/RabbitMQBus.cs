@@ -22,9 +22,10 @@ namespace Socca.Infrastructure.Bus
         private readonly IServiceScopeFactory _serviceScopeFactory;
 
         // Todo: move to settings file or .env file or any other safe option
-        private const string _hostName = "host.docker.internal";
+        private const string _hostName = "rabbitmq";//"host.docker.internal";
         private const string _userName = "user";
         private const string _password = "password";
+        private const int _port = 5672;
 
         public RabbitMQBus(IMediator mediator, IServiceScopeFactory serviceScopeFactory)
         {
@@ -85,12 +86,19 @@ namespace Socca.Infrastructure.Bus
 
         private void StartBasicConsume<T>() where T : Event
         {
+           
             var factory = new ConnectionFactory() {
-                HostName = _hostName,
-                UserName = _userName,
-                Password = _password,
-                DispatchConsumersAsync = true
+                HostName = "rabbitmq",// _hostName,
+                //UserName = "guest", // _userName,
+                //Password = "guest", //_password,
+                //DispatchConsumersAsync = true
             };
+            
+            // var factory = new ConnectionFactory
+            // {
+            //     Uri = new Uri("amqp://user:password@rabbitmq:5672"),
+            //     DispatchConsumersAsync = true
+            // };
 
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();

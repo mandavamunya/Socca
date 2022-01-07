@@ -1,6 +1,35 @@
 version: '3.4'
 
 services:
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password2021
+    ports:
+      - "5434:1433"
+
+
+  redis_image:
+    image: redis
+    container_name: cache
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    container_name: rabbitmq
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+    # environment:
+    #     - RABBITMQ_DEFAULT_USER=user
+    #     - RABBITMQ_DEFAULT_PASS=password
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+
   socca.footballclub.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -97,29 +126,20 @@ services:
       - redis_image
       - rabbitmq
 
-  db:
-      image: mcr.microsoft.com/mssql/server:2019-latest
-      environment:
-        - ACCEPT_EULA=Y
-        - SA_PASSWORD=Password2021
-      ports:
-        - "5434:1433"
-
-  redis_image:
-    image: redis
-    container_name: cache
-    ports:
-      - "6379:6379"
-
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
-    container_name: 'rabbitmq'
-    ports:
-        - "5672:5672"
-        - "15672:15672"
+  socca.ui.web:
     environment:
-        - RABBITMQ_DEFAULT_USER=user
-        - RABBITMQ_DEFAULT_PASS=password
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "57347:80"
+      - "44358:443"
     volumes:
-        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+      - ~/.aspnet/https:/root/.aspnet/https:ro
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+
+#  clientapp:
+#    ports:
+#      - "1338:80"
+#      - "5000:443"
+
+

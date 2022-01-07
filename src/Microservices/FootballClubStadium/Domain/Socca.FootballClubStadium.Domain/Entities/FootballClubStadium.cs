@@ -1,6 +1,8 @@
-﻿namespace Socca.FootballClubStadium.Domain.Entities
+﻿using Socca.Domain.Core.Entities;
+
+namespace Socca.FootballClubStadium.Domain.Entities
 {
-    public class FootballClubStadium
+    public class FootballClubStadium : BaseEntity
     {
         public FootballClubStadium()
         {
@@ -12,10 +14,7 @@
             StadiumId = stadiumId;
         }
 
-        public int Id { get; set; }
         public int FootballClubId { get; set; }
         public int StadiumId { get; set; }
-        // Todo: public DateTime DateCreated { get; set;}
-        // Todo: public bool IsCurrent { get; set; }
     }
 }

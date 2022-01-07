@@ -22,6 +22,7 @@ namespace Socca.PlayerTransfers.Application.EventHandlers
                 FromTeam = @event.From,
                 ToTeam = @event.To,
                 PlayerId = @event.PlayerId,
+                DateCreated = @event.Timestamp
             });
 
             return Task.CompletedTask;

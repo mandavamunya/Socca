@@ -7,8 +7,12 @@
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Constants\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.Bus\Socca.Infrastructure.Bus.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Constants\" />
   </ItemGroup>
 </Project>

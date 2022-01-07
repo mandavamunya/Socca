@@ -1,4 +1,4 @@
-﻿namespace Socca.FootballClub.Domain.Commands
+﻿namespace Socca.FootballClub.Application.Commands
 {
     public class CreateLinkToStadiumCommand: LinkToStadiumCommand
     {

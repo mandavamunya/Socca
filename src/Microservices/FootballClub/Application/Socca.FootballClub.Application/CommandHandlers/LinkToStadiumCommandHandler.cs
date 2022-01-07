@@ -2,10 +2,10 @@
 using System.Threading.Tasks;
 using MediatR;
 using Socca.Domain.Core.Bus;
-using Socca.FootballClub.Domain.Commands;
-using Socca.FootballClub.Domain.Events;
+using Socca.FootballClub.Application.Commands;
+using Socca.FootballClub.Application.Events;
 
-namespace Socca.FootballClub.Domain.CommandHandlers
+namespace Socca.FootballClub.Application.CommandHandlers
 {
     public class LinkToStadiumCommandHandler : IRequestHandler<CreateLinkToStadiumCommand, bool>
     {

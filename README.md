@@ -2,7 +2,7 @@
 
 # Technology used
 
-.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kurbernetes, Azure AKS, Azure SQL Server, Redis Cache, React, Material UI
+.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Kubernetes, Azure AKS, Azure SQL Server, Redis Cache, React, Material UI
 
 # Topics cover
 
@@ -16,7 +16,7 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 
 ## Requirements
 
-- An Event is generated when a football player is transfered between teams. 
+- An Event is generated when a football player is transferred between teams. 
 - An Event is generated when linking a football team to a stadium.
 
 # In progress
@@ -65,7 +65,7 @@ Sticky persistence: in the case that the session state is saved in an in-memory 
 
 ## Event Sourcing
 
-A distributed cache service was added to keep track of each application client's state. Only the current state of the client is saved in redis cache. 
+A distributed cache service was added to keep track of each application client's state. Only the current state of the client is saved in Redis cache. 
 
 <!--### Entity Relationship Diagram (ERD) for the application states that will be saved in the distributed Redis cache.
 ![](https://github.com/mandavamunya/Socca/blob/main/image/entity_relational_diagram.png)
@@ -76,7 +76,7 @@ In real life scenarios the Stadium, Player, FootballClub entities are actually l
 
 ## Outstanding work
 
-The entities FootballClubStadium and PlayerTransfer are actually event logs or history data and are not meant to be deleted. Each event must have a date occured or CreatedDate property. 
+The entities FootballClubStadium and PlayerTransfer are actually event logs or history data and are not meant to be deleted. Each event must have a date occurred or CreatedDate property. 
 
 A property IsCurrent will also be added to each event and therefore another update old event implementation is needed to set IsCurrent to false before adding a new event.
 
@@ -130,6 +130,8 @@ Stadium: https://localhost:44309/swagger/index.html
 
 Distributed Cache: https://localhost:44305/swagger/index.html
 
+UI Web: https://localhost:44358/
+
 
 
 # Create database migrations for each microservice
@@ -168,8 +170,39 @@ Migrations have already been created for you however to create migration (from t
 ```powershell
 dotnet ef migrations add InitialMigration --context stadiumdbcontext -p ../../Data/Socca.Stadium.Data/Socca.Stadium.Data.csproj -s Socca.Stadium.Api.csproj -o Migrations
 ```
+```powershell
+  <!-- REMOVE OR COMMENT OUT THE CLIENT APP TAGS BELOW DURING DOCKERINZING -->
 
 
+  <ItemGroup>
+    <None Remove="ClientApp\src\constants\" />
+  </ItemGroup>
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+      <!-- Ensure Node.js is installed   -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+      <!-- As part of publishing, ensure the JS resources are freshly built in production mode   -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+
+      <!-- Include the newly-built files in the publish output   -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)build\**" />
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+```
 
 ## Important RabbitMq Commands
 
@@ -296,3 +329,4 @@ SELECT @@versionGO
 3. [https://www.nginx.com/resources/glossary/load-balancing/]
 4. [https://en.wikipedia.org/wiki/Redis]
 5. [https://en.wikipedia.org/wiki/Kubernetes]
+6. [https://www.freecodecamp.org/news/how-to-deploy-react-apps-to-production/]
