@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import clsx from 'clsx';
 import Typography from "@material-ui/core/Typography";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
@@ -6,38 +8,24 @@ import Paper from '@material-ui/core/Paper';
 import PlayerCard from '../components/PlayerCard';
 import { useDrawerContext } from "../context/DrawerContext";
 
+import { useDispatch, useSelector } from 'react-redux';
+
+import { onPageLoadGetPlayers, ApplicationState } from '../redux';
+
 const drawerWidth = 240;
 
 export default function Players() {
+  const { players, playersError } = useSelector((state: ApplicationState) => state.playersReducer);  
+
+  const dispatch = useDispatch();
+
   const { drawerOpen } = useDrawerContext();
   const classes = useStyles();
-      
-  const players = [
-    {
-      firstName: "Paul",
-      lastName: "Pogba",
-      position: "Midfielder",
-      image: "https://upload.wikimedia.org/wikipedia/commons/c/cc/FRA-ARG_%2811%29_-_Paul_Pogba_%28cropped_2%29.jpg"
-    },
-    {
-      firstName: "Timo",
-      lastName: "Werner",
-      position: "Forward",
-      image: "https://upload.wikimedia.org/wikipedia/commons/c/c0/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Timo_Werner_850_0621.jpg"
-    },  
-    {
-      firstName: "Edinson",
-      lastName: "Cavani",
-      position: "Forward",  
-      image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Edinson_Cavani_2018.jpg"
-    },
-    {
-      firstName: "Hakim",
-      lastName: "Ziyech",
-      position: "Midfielder",  
-      image: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Hakim_Ziyech_2020.jpg"      
-    }  
-  ];
+
+  useEffect(() => {
+      dispatch(onPageLoadGetPlayers()); 
+  });
+
   return (
     <main
     className={clsx(classes.content, {

@@ -59,6 +59,14 @@ namespace Socca.UI.Web
                client.BaseAddress = new Uri(Configuration.GetSection("ServiceProviders")["PlayerTransferBase"]);
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins(Configuration.GetValue<string>("Settings:AllowedOrigins"));
+                                  });
+            });
 
             services.AddControllersWithViews();
             services.AddControllers();
@@ -134,9 +142,9 @@ namespace Socca.UI.Web
                 //}
             });
 
-            // app.UseEndpoints(endPoints => {
-            //     endPoints.MapControllers().RequireCors(MyAllowSpecificOrigins);
-            // });
+            app.UseEndpoints(endPoints => {
+                 endPoints.MapControllers().RequireCors(MyAllowSpecificOrigins);
+            });
         }
     }
 }

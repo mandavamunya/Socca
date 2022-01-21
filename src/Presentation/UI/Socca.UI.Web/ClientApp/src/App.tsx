@@ -16,36 +16,40 @@ import './App.css';
 import logo from './assets/images/logo.svg';
 import { DrawerContextProvider } from './context/DrawerContext';
 
+import { store } from './redux';
+import { Provider } from 'react-redux';
 
 function App() {
   const classes = useStyles();
 
   return (
-    <Router>
-      <div className={classes.root}>
-        <DrawerContextProvider>
-          <CssBaseline />
-          <DrawerNav />
+    <Provider store={store}>
+      <Router>
+        <div className={classes.root}>
+          <DrawerContextProvider>
+            <CssBaseline />
+            <DrawerNav />
 
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/players">
-              <Players />
-            </Route>
-            <Route path="/stadiums">
-              <Stadiums />
-            </Route>
-            <Route path="/teams">
-              <Teams />
-            </Route>          
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </DrawerContextProvider>
-      </div>
-    </Router>
+            {/* A <Switch> looks through its children <Route>s and
+                renders the first one that matches the current URL. */}
+            <Switch>
+              <Route path="/players">
+                <Players />
+              </Route>
+              <Route path="/stadiums">
+                <Stadiums />
+              </Route>
+              <Route path="/teams">
+                <Teams />
+              </Route>          
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </DrawerContextProvider>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
