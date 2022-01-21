@@ -3,7 +3,7 @@ import { PlayersReducer } from './playersReducer';
 
 const rootReducer = combineReducers({
     playersReducer: PlayersReducer
-  //some more reducer will come
+  //some more reducers will come
 });
 
 export type ApplicationState = ReturnType<typeof rootReducer>;
