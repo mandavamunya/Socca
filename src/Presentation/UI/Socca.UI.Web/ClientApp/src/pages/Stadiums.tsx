@@ -12,7 +12,7 @@ export default function Stadiums() {
   return (
     <main
     className={clsx(classes.content, {
-        [classes.contentShift]: drawerOpen,
+      [classes.contentShift]: drawerOpen,
     })}
     >
       <div className={classes.drawerHeader} />
