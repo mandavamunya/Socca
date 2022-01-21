@@ -8,11 +8,11 @@
 
 ## Frontend
 
-React, Material UI, React-Redux, Redux, Thunk
+React, Material UI, React-Redux, Redux, Redux-Thunk
 
 ## Future
 
-- Kubernetes, Azure AKS, EKS, Azure SQL Server
+Kubernetes, Azure AKS, EKS, Azure SQL Server
 
 
 # Topics cover
@@ -34,19 +34,21 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 
 - Update documentation (On going)
 - Distributed Caching with Redis Cache (95% complete)
-- Dockerize the application (95% complete)
-- Add React frontend application (30%)
-- Add Kubernetes support (just started)
+
 
 
 # What's next
-- Add a security microservice
-- Add centralized logging and health checks
-- Make use of Azure SQL Server, SQL Server on AWS
-- Deploy to Azure AKS, EKS
+
+- The PlayerTransferCreatedEvent and LinkToStadiumCreatedEvent implementation was added as an example of event sourcing. The PlayerAddedEvent, StadiumAddedEvent and FootballClubAddedEvent events implementation is still outstanding.
+- Configure frontend client application and bff to communicate via https. 
+- Add a security micro service
+- Add Kubernetes support 
+- Add centralised logging and health checks
+- Create pipelines on GitLab.
+- Make use of Azure SQL Server, AWS MS SQL Server
+- Deploy to Azure AKS and AWS EKS
 - Add more unit tests
 - Add functional tests and integration tests
-
 # Frontend
 
 ## Teams
