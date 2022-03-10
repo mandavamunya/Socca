@@ -114,11 +114,11 @@ namespace Socca.DistributedCache.Api
             ConfigureEventBus(app);
         }
 
-        private static void ConfigureEventBus(IApplicationBuilder app)
+        private void ConfigureEventBus(IApplicationBuilder app)
         {
             var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
-            eventBus.Subscribe<PlayerTransferCreatedEvent, PlayerTransferEventHandler>();
-            eventBus.Subscribe<LinkToStadiumCreatedEvent, LinkToStadiumEventHandler>();
+            eventBus.Subscribe<PlayerTransferCreatedEvent, PlayerTransferEventHandler>(Configuration.GetConnectionString("RabbitMqConnectionString"));
+            eventBus.Subscribe<LinkToStadiumCreatedEvent, LinkToStadiumEventHandler>(Configuration.GetConnectionString("RabbitMqConnectionString"));
         }
     }
 }

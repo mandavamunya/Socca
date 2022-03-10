@@ -110,10 +110,11 @@ namespace Socca.PlayerTransfers.Api
             ConfigureEventBus(app);
         }
 
-        private static void ConfigureEventBus(IApplicationBuilder app)
+        private void ConfigureEventBus(IApplicationBuilder app)
         {
             var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
-            eventBus.Subscribe<PlayerTransferCreatedEvent, PlayerTransferEventHandler>();
+            var rabbitMqConnectionString = Configuration.GetConnectionString("RabbitMqConnectionString");
+            eventBus.Subscribe<PlayerTransferCreatedEvent, PlayerTransferEventHandler>(rabbitMqConnectionString);
         }
 
     }

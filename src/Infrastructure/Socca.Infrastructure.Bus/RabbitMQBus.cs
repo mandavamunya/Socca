@@ -21,12 +21,6 @@ namespace Socca.Infrastructure.Bus
         private readonly List<Type> _eventTypes;
         private readonly IServiceScopeFactory _serviceScopeFactory;
 
-        // Todo: move to settings file or .env file or any other safe option
-        private const string _hostName = "rabbitmq";//"host.docker.internal";
-        private const string _userName = "user";
-        private const string _password = "password";
-        private const int _port = 5672;
-
         public RabbitMQBus(IMediator mediator, IServiceScopeFactory serviceScopeFactory)
         {
             _mediator = mediator;
@@ -40,9 +34,10 @@ namespace Socca.Infrastructure.Bus
             return _mediator.Send(command);
         }
 
-        public void Publish<T>(T @event) where T : Event
+        public void Publish<T>(T @event, string connectionString) where T : Event
         {
-            var factory = new ConnectionFactory() { HostName = _hostName, UserName = _userName, Password = _password };
+            var factory = new ConnectionFactory();
+            factory.Uri = new Uri(connectionString);
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
@@ -56,7 +51,7 @@ namespace Socca.Infrastructure.Bus
             }
         }
 
-        public void Subscribe<T, TH>()
+        public void Subscribe<T, TH>(string connectionString)
             where T : Event
             where TH : IEventHandler<T>
         {
@@ -81,24 +76,15 @@ namespace Socca.Infrastructure.Bus
 
             _handlers[eventName].Add(handlerType);
 
-            StartBasicConsume<T>();
+            StartBasicConsume<T>(connectionString);
         }
 
-        private void StartBasicConsume<T>() where T : Event
+        private void StartBasicConsume<T>(string connectionString) where T : Event
         {
-           
-            var factory = new ConnectionFactory() {
-                HostName = "rabbitmq",// _hostName,
-                //UserName = "guest", // _userName,
-                //Password = "guest", //_password,
-                //DispatchConsumersAsync = true
-            };
-            
-            // var factory = new ConnectionFactory
-            // {
-            //     Uri = new Uri("amqp://user:password@rabbitmq:5672"),
-            //     DispatchConsumersAsync = true
-            // };
+
+            var factory = new ConnectionFactory();
+            factory.Uri = new Uri(connectionString);
+            factory.DispatchConsumersAsync = true;
 
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();

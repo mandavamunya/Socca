@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.8'
 
 services:
 
@@ -17,18 +17,29 @@ services:
     ports:
       - "6379:6379"
 
-  rabbitmq:
-    image: rabbitmq:3.8-management-alpine
-    container_name: rabbitmq
-    ports:
-        - "5672:5672"
-        - "15672:15672"
-    # environment:
-    #     - RABBITMQ_DEFAULT_USER=user
-    #     - RABBITMQ_DEFAULT_PASS=password
-    volumes:
-        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+  rabbitmq3:
+      container_name: "rabbitmq"
+      image: rabbitmq:3.8-management-alpine
+      environment:
+          - RABBITMQ_DEFAULT_USER=mmandava
+          - RABBITMQ_DEFAULT_PASS=mmandava_password
+      ports:
+          # AMQP protocol port
+          - '5672:5672'
+          # HTTP management UI
+          - '15672:15672'
+  #rabbitmq:
+  #  image: rabbitmq:3.8-management-alpine
+  #  container_name: rabbitmq
+  #  ports:
+  #      - "5672:5672"
+  #      - "15672:15672"
+  #  environment:
+  #      - RABBITMQ_DEFAULT_USER=user
+  #      - RABBITMQ_DEFAULT_PASS=password
+  #  volumes:
+  #      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+  #      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
 
   socca.footballclub.api:
     environment:
