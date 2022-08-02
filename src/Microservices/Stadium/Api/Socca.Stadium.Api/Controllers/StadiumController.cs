@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Socca.Stadium.Application.Interfaces;
+using Socca.Stadium.Domain.Interfaces;
 
 namespace Socca.Stadium.Api.Controllers
 {

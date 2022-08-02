@@ -8,11 +8,19 @@
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Constants\" />
+    <Folder Include="ProjectAggregate\" />
+    <Folder Include="ProjectAggregate\EventHandlers\" />
+    <Folder Include="ProjectAggregate\Events\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.Bus\Socca.Infrastructure.Bus.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Constants\" />
+    <None Remove="ProjectAggregate\" />
+    <None Remove="ProjectAggregate\EventHandlers\" />
+    <None Remove="ProjectAggregate\Events\" />
+    <None Remove="Services\" />
   </ItemGroup>
 </Project>

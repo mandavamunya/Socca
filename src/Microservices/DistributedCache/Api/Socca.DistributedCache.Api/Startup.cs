@@ -1,24 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.StackExchangeRedis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Socca.DistributedCache.Application.EventHandlers;
-using Socca.DistributedCache.Application.Events;
-using Socca.DistributedCache.Application.Services;
 using Socca.DistributedCache.Data.Context;
 using Socca.DistributedCache.Domain.Interfaces;
+using Socca.DistributedCache.Domain.ProjectAggregate.EventHandlers;
+using Socca.DistributedCache.Domain.ProjectAggregate.Events;
+using Socca.DistributedCache.Domain.Services;
 using Socca.Domain.Core.Bus;
 using Socca.Infrastructure.IoC;
 

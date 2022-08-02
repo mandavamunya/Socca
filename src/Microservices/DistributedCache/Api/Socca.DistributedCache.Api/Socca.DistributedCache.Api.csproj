@@ -19,9 +19,7 @@
     <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.IoC\Socca.Infrastructure.IoC.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\..\Application\Socca.DistributedCache.Application\Socca.DistributedCache.Application.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Socca.DistributedCache.Data\Socca.DistributedCache.Data.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

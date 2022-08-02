@@ -7,5 +7,11 @@
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="ProjectAggregate\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ProjectAggregate\" />
+    <None Remove="Services\" />
   </ItemGroup>
 </Project>

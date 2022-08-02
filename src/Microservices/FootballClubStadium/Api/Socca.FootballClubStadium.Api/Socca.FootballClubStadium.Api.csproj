@@ -20,11 +20,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Application\Socca.FootballClubStadium.Application\Socca.FootballClubStadium.Application.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.IoC\Socca.Infrastructure.IoC.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\..\Data\Socca.FootballClubStadium.Data\Socca.FootballClubStadium.Data.csproj" />
   </ItemGroup>
+
 </Project>

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Socca.FootballClub.Application.Interfaces;
-using Socca.FootballClub.Application.Models;
+using Socca.FootballClub.Domain.Interfaces;
+using Socca.FootballClub.Domain.Models;
 
 namespace Socca.FootballClub.Api.Controllers
 {

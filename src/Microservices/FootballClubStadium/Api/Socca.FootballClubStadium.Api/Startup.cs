@@ -9,13 +9,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Socca.Domain.Core.Bus;
-using Socca.FootballClubStadium.Application.EventHandlers;
-using Socca.FootballClubStadium.Application.Events;
-using Socca.FootballClubStadium.Application.Interfaces;
-using Socca.FootballClubStadium.Application.Services;
+using Socca.FootballClubStadium.Domain.ProjectAggregate.EventHandlers;
+using Socca.FootballClubStadium.Domain.ProjectAggregate.Events;
+using Socca.FootballClubStadium.Domain.Interfaces;
+using Socca.FootballClubStadium.Domain.Services;
 using Socca.FootballClubStadium.Data.Context;
 using Socca.FootballClubStadium.Data.Repository;
-using Socca.FootballClubStadium.Domain.Interfaces;
 using Socca.Infrastructure.IoC;
 
 namespace Socca.FootballClubStadium.Api

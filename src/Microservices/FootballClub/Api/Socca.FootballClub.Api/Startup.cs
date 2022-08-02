@@ -8,13 +8,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Socca.FootballClub.Application.Interfaces;
-using Socca.FootballClub.Application.Services;
+using Socca.FootballClub.Domain.Interfaces;
+using Socca.FootballClub.Domain.Services;
 using Socca.FootballClub.Data.Context;
 using Socca.FootballClub.Data.Repository;
-using Socca.FootballClub.Application.CommandHandlers;
-using Socca.FootballClub.Application.Commands;
-using Socca.FootballClub.Domain.Interfaces;
+using Socca.FootballClub.Domain.ProjectAggregate.CommandHandlers;
+using Socca.FootballClub.Domain.ProjectAggregate.Commands;
 using Socca.Infrastructure.IoC;
 
 namespace Socca.FootballClub.Api

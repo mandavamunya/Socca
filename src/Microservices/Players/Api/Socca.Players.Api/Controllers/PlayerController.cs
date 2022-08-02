@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Socca.Players.Application.Interfaces;
-using Socca.Players.Application.Models;
+using Socca.Players.Domain.Models;
 using Socca.Players.Domain.Entities;
+using Socca.Players.Domain.Interfaces;
 
 namespace Socca.Players.Api.Controllers
 {

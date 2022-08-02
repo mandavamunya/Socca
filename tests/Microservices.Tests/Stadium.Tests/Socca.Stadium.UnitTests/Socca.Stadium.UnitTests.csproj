@@ -22,7 +22,4 @@
   <ItemGroup>
     <Folder Include="DomainTests\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\src\Microservices\Stadium\Application\Socca.Stadium.Application\Socca.Stadium.Application.csproj" />
-  </ItemGroup>
 </Project>

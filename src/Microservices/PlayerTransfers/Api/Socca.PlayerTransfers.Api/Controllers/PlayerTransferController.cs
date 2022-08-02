@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Socca.PlayerTransfers.Application.Interfaces;
+using Socca.PlayerTransfers.Domain.Interfaces;
 using Socca.PlayerTransfers.Domain.Entities;
 
 namespace Socca.PlayerTransfers.Api.Controllers

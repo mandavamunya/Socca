@@ -9,11 +9,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Socca.Infrastructure.IoC;
-using Socca.Stadium.Application.Interfaces;
-using Socca.Stadium.Application.Services;
+using Socca.Stadium.Domain.Interfaces;
+using Socca.Stadium.Domain.Services;
 using Socca.Stadium.Data.Context;
 using Socca.Stadium.Data.Repository;
-using Socca.Stadium.Domain.Interfaces;
 
 namespace Socca.Stadium.Api
 {
