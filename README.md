@@ -4,7 +4,7 @@
 
 ## Backend
 
-.Net Core 5, RabbitMq, MsSQL, MediatR, Swagger, Docker, Redis Cache
+.Net 6, RabbitMq, MsSQL, MediatR, Swagger, Docker, Redis Cache
 
 ## Frontend
 
