@@ -14,16 +14,14 @@ namespace Socca.FootballClubStadium.Domain.ProjectAggregate.EventHandlers
             _repository = repository;
         }
 
-        public Task Handle(LinkToStadiumCreatedEvent @event)
+        public async Task Handle(LinkToStadiumCreatedEvent @event)
         {
-            _repository.Add(new Domain.Entities.FootballClubStadium()
+            await _repository.Add(new Domain.Entities.FootballClubStadium()
             {
                 FootballClubId = @event.FootballClubId,
                 StadiumId = @event.StadiumId,
                 DateCreated = @event.Timestamp
             });
-
-            return Task.CompletedTask;
         }
     }
 }

@@ -16,9 +16,9 @@ namespace Socca.DistributedCache.Domain.ProjectAggregate.EventHandlers
             _repository = repository;
         }
 
-        public Task Handle(PlayerTransferCreatedEvent @event)
+        public async Task Handle(PlayerTransferCreatedEvent @event)
         {
-            _repository.Update($"{ServiceNameConstant.PlayerTransfer}-{@event.PlayerId.ToString()}",
+            await _repository.Update($"{ServiceNameConstant.PlayerTransfer}-{@event.PlayerId.ToString()}",
             new PlayerTransfer()
             {
                 FromTeam = @event.From,
@@ -26,8 +26,6 @@ namespace Socca.DistributedCache.Domain.ProjectAggregate.EventHandlers
                 PlayerId = @event.PlayerId,
                 Timestamp = @event.Timestamp
             });
-
-            return Task.CompletedTask;
         }
     }
 }

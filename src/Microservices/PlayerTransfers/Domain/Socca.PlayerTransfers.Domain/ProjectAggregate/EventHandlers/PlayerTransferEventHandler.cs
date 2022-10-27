@@ -15,17 +15,15 @@ namespace Socca.PlayerTransfers.Domain.ProjectAggregate.EventHandlers
             _playerTransferRepository = playerTransferRepository;
         }
 
-        public Task Handle(PlayerTransferCreatedEvent @event)
+        public async Task Handle(PlayerTransferCreatedEvent @event)
         {
-            _playerTransferRepository.Add(new PlayerTransfer()
+            await _playerTransferRepository.Add(new PlayerTransfer()
             {
                 FromTeam = @event.From,
                 ToTeam = @event.To,
                 PlayerId = @event.PlayerId,
                 DateCreated = @event.Timestamp
             });
-
-            return Task.CompletedTask;
         }
     }
 

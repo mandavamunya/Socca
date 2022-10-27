@@ -16,9 +16,9 @@ namespace Socca.DistributedCache.Domain.ProjectAggregate.EventHandlers
             _repository = repository;
         }
 
-        public Task Handle(LinkToStadiumCreatedEvent @event)
+        public async Task Handle(LinkToStadiumCreatedEvent @event)
         {
-            _repository.Update(
+            await _repository.Update(
             $"{ServiceNameConstant.FootballClubStadium}-{@event.FootballClubId.ToString()}",
             new FootballClubStadium()
             {
@@ -27,7 +27,6 @@ namespace Socca.DistributedCache.Domain.ProjectAggregate.EventHandlers
                 Timestamp = @event.Timestamp
             });
 
-            return Task.CompletedTask;
         }
     }
 }

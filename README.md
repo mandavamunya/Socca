@@ -38,7 +38,7 @@ Microservices architecture, event driven architecture, CQRS, event sourcing, cle
 
 
 # What's next
-
+- 
 - The PlayerTransferCreatedEvent and LinkToStadiumCreatedEvent implementation was added as an example of event sourcing. The PlayerAddedEvent, StadiumAddedEvent and FootballClubAddedEvent events implementation is still outstanding.
 - Configure frontend client application and bff to communicate via https. 
 - Add a security micro service
