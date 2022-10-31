@@ -12,6 +12,11 @@ namespace Socca.FootballClub.Domain.ProjectAggregate.Specifications
             : base(b => b.Name.Equals(name))
         {
         }
+
+        public FootballClubByNameSpec(int id)
+            : base(b => b.Id == id)
+        {
+        }
     }
 }
 

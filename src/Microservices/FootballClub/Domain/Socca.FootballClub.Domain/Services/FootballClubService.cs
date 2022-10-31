@@ -48,7 +48,8 @@ namespace Socca.FootballClub.Domain.Services
         public async Task<Entities.FootballClub> GetFootballClubByName(string name)
         {
             var spec = new FootballClubByNameSpec(name);
-            var footballClubs = await _asyncRepository.ListAsync((ISpecification<Entities.FootballClub>)spec);
+            // This is just anexample. Use a specification to get a lookup given a certain Id or key
+            var footballClubs = await _asyncRepository.ListAsync((ISpecification<Entities.FootballClub>)spec); 
             var footballClub = footballClubs.FirstOrDefault();
             // In case of a get http request you can choose to return null value
             // Or to fail fast depending on the business requeirements

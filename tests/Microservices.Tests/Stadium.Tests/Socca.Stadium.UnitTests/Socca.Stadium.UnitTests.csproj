@@ -19,7 +19,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DomainTests\" />
-  </ItemGroup>
 </Project>

@@ -20,9 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DomainTests\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\..\src\Microservices\FootballClubStadium\Domain\Socca.FootballClubStadium.Domain\Socca.FootballClubStadium.Domain.csproj" />
   </ItemGroup>
 </Project>

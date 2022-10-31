@@ -21,7 +21,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DomainTests\" />
-    <Folder Include="DataTests\" />
+    <Folder Include="EntitiesTests\" />
+    <Folder Include="ProjectAggregate\" />
+    <Folder Include="ProjectAggregate\CommandHandlerTests\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="EntitiesTests\" />
+    <None Remove="ProjectAggregate\" />
+    <None Remove="ProjectAggregate\CommandHandlerTests\" />
+    <None Remove="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\Microservices\FootballClub\Domain\Socca.FootballClub.Domain\Socca.FootballClub.Domain.csproj" />
   </ItemGroup>
 </Project>
