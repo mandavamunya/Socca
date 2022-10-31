@@ -10,5 +10,8 @@ namespace Socca.Players.Domain.Interfaces
         Task<IEnumerable<Player>> GetPlayers();
         Task AddPlayer(Player player);
         Task Transfer(PlayerTransfer playerTransfer);
+        Task<Domain.Entities.Player> Get(int id);
+        Task Update(Domain.Entities.Player footballClub);
+        Task Remove(Domain.Entities.Player footballClub);
     }
 }

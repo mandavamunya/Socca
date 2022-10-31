@@ -9,6 +9,9 @@
     <Folder Include="Events\" />
     <Folder Include="Bus\" />
     <Folder Include="Entities\" />
+    <Folder Include="GuardClause\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Abstracts\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,5 +19,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Entities\" />
+    <None Remove="GuardClause\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Abstracts\" />
   </ItemGroup>
 </Project>

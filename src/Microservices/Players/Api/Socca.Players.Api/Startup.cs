@@ -15,6 +15,7 @@ using Socca.Players.Domain.Interfaces;
 using Socca.Players.Domain.Service;
 using Socca.Players.Data.Context;
 using Socca.Players.Data.Repository;
+using Socca.Domain.Core.Interfaces;
 
 namespace Socca.Players.Api
 {
@@ -61,7 +62,7 @@ namespace Socca.Players.Api
             services.AddTransient<IRequestHandler<CreatePlayerTransferCommand, bool>, PlayerTransferCommandHandler>();
 
             // Data
-            services.AddTransient<IPlayerRepository, PlayerRepository>();
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
             services.AddTransient<PlayerDbContext>();
 
             // Application Services

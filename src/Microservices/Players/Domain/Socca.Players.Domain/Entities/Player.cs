@@ -1,6 +1,8 @@
-﻿namespace Socca.Players.Domain.Entities
+﻿using Socca.Domain.Core.Entities;
+
+namespace Socca.Players.Domain.Entities
 {
-    public class Player
+    public class Player: BaseEntity
     {
         public Player()
         {
@@ -12,7 +14,6 @@
             Position = position;
             Image = image;
         }
-        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Position { get; set; }

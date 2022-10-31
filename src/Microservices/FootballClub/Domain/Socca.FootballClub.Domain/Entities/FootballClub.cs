@@ -1,6 +1,8 @@
-﻿namespace Socca.FootballClub.Domain.Entities
+﻿using Socca.Domain.Core.Entities;
+
+namespace Socca.FootballClub.Domain.Entities
 {
-    public class FootballClub
+    public class FootballClub : BaseEntity
     {
         public FootballClub()
         {
@@ -14,7 +16,6 @@
             Image = image;
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Location { get; set; }
         public string Description { get; set; }

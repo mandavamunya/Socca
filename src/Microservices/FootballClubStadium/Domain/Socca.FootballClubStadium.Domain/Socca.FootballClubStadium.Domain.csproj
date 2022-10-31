@@ -11,6 +11,7 @@
     <Folder Include="ProjectAggregate\EventHandlers\" />
     <Folder Include="ProjectAggregate\Events\" />
     <Folder Include="Services\" />
+    <Folder Include="ProjectAggregate\Specifications\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Domain\Socca.Domain.Core\Socca.Domain.Core.csproj" />
@@ -20,5 +21,6 @@
     <None Remove="ProjectAggregate\EventHandlers\" />
     <None Remove="ProjectAggregate\Events\" />
     <None Remove="Services\" />
+    <None Remove="ProjectAggregate\Specifications\" />
   </ItemGroup>
 </Project>

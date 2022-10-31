@@ -15,6 +15,7 @@ using Socca.FootballClub.Data.Repository;
 using Socca.FootballClub.Domain.ProjectAggregate.CommandHandlers;
 using Socca.FootballClub.Domain.ProjectAggregate.Commands;
 using Socca.Infrastructure.IoC;
+using Socca.Domain.Core.Interfaces;
 
 namespace Socca.FootballClub.Api
 {
@@ -58,7 +59,7 @@ namespace Socca.FootballClub.Api
         {
 
             // Data
-            services.AddTransient<IFootballClubRepository, FootballClubRepository>();
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
             services.AddTransient<FootballClubDbContext>();
 
             // Application Services
