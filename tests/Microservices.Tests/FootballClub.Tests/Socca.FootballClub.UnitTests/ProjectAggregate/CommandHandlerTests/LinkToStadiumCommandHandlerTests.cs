@@ -22,7 +22,6 @@ namespace Socca.FootballClub.UnitTests.ProjectAggregate.CommandHandlerTests
             configMock = new Mock<IConfiguration>();
         }
 
-
         private int footballClubId = 1;
         private int stadiumId = 2;
 

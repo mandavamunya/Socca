@@ -26,7 +26,6 @@ namespace Socca.Domain.Core.Abstracts
         {
             IncludeStrings.Add(includeString);
         }
-
     }
 }
 
