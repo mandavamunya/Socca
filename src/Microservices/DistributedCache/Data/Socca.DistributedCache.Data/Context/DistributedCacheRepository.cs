@@ -20,7 +20,7 @@ namespace Socca.DistributedCache.Data.Context
             await _cache.RemoveAsync(key);
         }
 
-        public async Task<D> Get(string key)
+        public async Task<D> Get(string key)                                                                                            
         {
             var cachedObject = await _cache.GetStringAsync(key);
             return (string.IsNullOrEmpty(cachedObject)) ? default: JsonConvert.DeserializeObject<D>(cachedObject);

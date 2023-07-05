@@ -13,10 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.IoC\Socca.Infrastructure.IoC.csproj">
+    <ProjectReference Include="..\..\Data\Socca.DistributedCache.Data\Socca.DistributedCache.Data.csproj" />
+    <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure\Socca.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\Socca.DistributedCache.Data\Socca.DistributedCache.Data.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

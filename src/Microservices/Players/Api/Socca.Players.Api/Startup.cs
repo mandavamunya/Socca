@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi.Models; 
 using Socca.Infrastructure.IoC;
 using Socca.Players.Domain.CommandHandlers;
 using Socca.Players.Domain.ProjectAggregate.Commands;

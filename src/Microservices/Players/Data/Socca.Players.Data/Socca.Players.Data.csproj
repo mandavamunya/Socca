@@ -6,11 +6,9 @@
 
   <ItemGroup>
     <Folder Include="Context\" />
-    <Folder Include="Repository\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Socca.Players.Domain\Socca.Players.Domain.csproj" />
-    <ProjectReference Include="..\..\..\..\Infrastructure\Socca.Infrastructure.IoC\Socca.Infrastructure.IoC.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">

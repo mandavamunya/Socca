@@ -1,0 +1,15 @@
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/bin/Debug/net6.0/Socca.Infrastructure.deps.json
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/bin/Debug/net6.0/Socca.Infrastructure.dll
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/bin/Debug/net6.0/Socca.Infrastructure.pdb
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/bin/Debug/net6.0/Socca.Domain.Core.dll
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/bin/Debug/net6.0/Socca.Domain.Core.pdb
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/Socca.Infrastructure.csproj.AssemblyReference.cache
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/Socca.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/Socca.Infrastructure.AssemblyInfoInputs.cache
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/Socca.Infrastructure.AssemblyInfo.cs
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/Socca.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/Socca.Infrastructure.csproj.CopyComplete
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/Socca.Infrastructure.dll
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/refint/Socca.Infrastructure.dll
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/Socca.Infrastructure.pdb
+/Users/munyaradzimandava/workspace/dotnet/2022/Socca/src/Infrastructure/Socca.Infrastructure/obj/Debug/net6.0/ref/Socca.Infrastructure.dll
