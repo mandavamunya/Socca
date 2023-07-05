@@ -8,8 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/Microservices/Players/Api/Socca.Players.Api/Socca.Players.Api.csproj", "src/Microservices/Players/Api/Socca.Players.Api/"]
-COPY ["src/Infrastructure/Socca.Infrastructure.IoC/Socca.Infrastructure.IoC.csproj", "src/Infrastructure/Socca.Infrastructure.IoC/"]
-COPY ["src/Infrastructure/Socca.Infrastructure.Bus/Socca.Infrastructure.Bus.csproj", "src/Infrastructure/Socca.Infrastructure.Bus/"]
+COPY ["src/Infrastructure/Socca.Infrastructure/Socca.Infrastructure.csproj", "src/Infrastructure/Socca.Infrastructure/"]
 COPY ["src/Domain/Socca.Domain.Core/Socca.Domain.Core.csproj", "src/Domain/Socca.Domain.Core/"]
 COPY ["src/Microservices/Players/Data/Socca.Players.Data/Socca.Players.Data.csproj", "src/Microservices/Players/Data/Socca.Players.Data/"]
 COPY ["src/Microservices/Players/Domain/Socca.Players.Domain/Socca.Players.Domain.csproj", "src/Microservices/Players/Domain/Socca.Players.Domain/"]

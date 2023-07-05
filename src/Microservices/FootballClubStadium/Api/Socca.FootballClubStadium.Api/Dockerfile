@@ -8,8 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/Microservices/FootballClubStadium/Api/Socca.FootballClubStadium.Api/Socca.FootballClubStadium.Api.csproj", "src/Microservices/FootballClubStadium/Api/Socca.FootballClubStadium.Api/"]
-COPY ["src/Infrastructure/Socca.Infrastructure.IoC/Socca.Infrastructure.IoC.csproj", "src/Infrastructure/Socca.Infrastructure.IoC/"]
-COPY ["src/Infrastructure/Socca.Infrastructure.Bus/Socca.Infrastructure.Bus.csproj", "src/Infrastructure/Socca.Infrastructure.Bus/"]
+COPY ["src/Infrastructure/Socca.Infrastructure/Socca.Infrastructure.csproj", "src/Infrastructure/Socca.Infrastructure/"]
 COPY ["src/Domain/Socca.Domain.Core/Socca.Domain.Core.csproj", "src/Domain/Socca.Domain.Core/"]
 COPY ["src/Microservices/FootballClubStadium/Data/Socca.FootballClubStadium.Data/Socca.FootballClubStadium.Data.csproj", "src/Microservices/FootballClubStadium/Data/Socca.FootballClubStadium.Data/"]
 COPY ["src/Microservices/FootballClubStadium/Domain/Socca.FootballClubStadium.Domain/Socca.FootballClubStadium.Domain.csproj", "src/Microservices/FootballClubStadium/Domain/Socca.FootballClubStadium.Domain/"]
